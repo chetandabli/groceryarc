@@ -1,3 +1,5 @@
+import {getId, creEle} from "./shortcuts.js"
+
 import navbar from "../components/navbar.js";
 
 document.getElementById("master_navbar").innerHTML = navbar()
@@ -41,3 +43,42 @@ window.onscroll = ()=>{
 import { footer } from "../components/footer.js";
 let footer_new=document.getElementById("footer");
 footer_new.innerHTML=footer();
+
+let url="http://localhost:3000/fruitsVeg";
+
+let get_data=async()=>{
+
+    let res=await fetch(`${url}`)
+    let data= await res.json();
+    console.log(data)
+    append_data(data)
+}
+
+get_data();
+
+const append_data=(data)=>{
+let cont = document.getElementById("container");
+cont.innerHTML=null;
+data.forEach((el)=>{
+    let div =document.createElement("div");
+    div.setAttribute("class","product_div");
+    let discount =document.createElement("div");
+    discount.setAttribute("class","discount");
+    discount.innerText=el.off;
+    let image = document.createElement("img");
+    image.setAttribute("class","p_image");
+    image.src=el.image_url;
+    let proname =document.createElement("p");
+    proname.setAttribute("class","proname");
+    proname.innerText=el.proName;
+    let details =document.createElement("p");
+    proname.innerText=el.detail;
+
+    div.append(discount,image,proname,details);
+    cont.append(div);
+})
+
+
+
+}
+

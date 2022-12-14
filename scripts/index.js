@@ -1,4 +1,4 @@
-import {getId, creEle} from "./sortcuts.js"
+import {getId, creEle} from "./shortcuts.js"
 
 // navbar
 import navbar from "../components/navbar.js";

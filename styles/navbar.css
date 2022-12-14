@@ -63,6 +63,7 @@ body{
     font-size: 13px;
     color: #4a4a4a;
     line-height: 21px;
+    transition: all 0.5s ease-out;
 }
 #nav_topmost_section>:nth-child(3):hover, #nav_topmost_section>:nth-child(4):hover{
     cursor: pointer;
@@ -100,6 +101,7 @@ body{
     height: 32px;
     background-color: #84c225;
     border: 4px solid #84c225;
+    transition: all 0.5s ease-out;
 }
 
 #search_button:hover{
@@ -150,6 +152,7 @@ body{
     display: flex;
     height: 36px;
     border: 1px solid #f2f2f2;
+    position: relative;
 }
 #dropdown_menu{
     width: 245px;
@@ -158,6 +161,15 @@ body{
     justify-content: space-between;
     margin: 0;
     align-items: center;
+    position: relative;
+}
+#menus_master{
+    position: absolute;
+    left: 0;
+    top: 36px;
+    width: 500px;
+    height: auto;
+    background-color: #a13f3f
 }
 #dropdown_menu>p{
     padding: 0 8px 0 5px;
@@ -169,6 +181,7 @@ body{
 #nav_offers_button{
     display: flex;
     align-items: center;
+    transition: all 0.5s ease-out;
 }
 #nav_offers_button:hover{
     cursor: pointer;

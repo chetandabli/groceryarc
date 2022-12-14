@@ -41,6 +41,7 @@ const navbar = ()=>{
         <div id="nav_offers_button">
             <a href="/offers.html"><i class="bi bi-tag-fill" style="color: #DA251D;"></i>OFFERS</a>
         </div>
+        <div id="menus_master"></div>
     </div>
 </div>`
 }

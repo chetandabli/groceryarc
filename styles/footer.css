@@ -1,0 +1,140 @@
+#discription{
+    font-family: sans-serif;
+    width:64%;
+    margin:auto;
+    border:1px solid grey;
+    padding: 0px 70px 20px 50px;
+    font-size: 16.5px;
+    margin-bottom: 20px;
+}
+a{
+    text-decoration: none;
+    color: rgb(4, 216, 4);
+}
+.one{
+    color:black;
+    margin-bottom: -16.5px;
+}
+.two{
+    color:gray;
+    margin-bottom: -16.5px;
+}
+#footr{
+    background-color: rgb(18, 17, 17);
+    font-family: sans-serif;
+    font-size: 13px;
+}
+#one{
+    color:white;
+    background-color: rgb(18, 17, 17);
+    width:73%;
+    border:0px solid blue;
+    margin:auto;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+#one>div{
+    
+    margin-top:30px;
+    border:0px solid red;
+}
+#one>div>a{
+    text-decoration: none;
+    color:rgb(202, 201, 201);
+}
+#one>div>a:hover{
+    text-decoration: underline;
+}
+
+#dot{
+    color:white;
+    margin:auto;
+    width:73%;
+}
+#two{
+    color:white;
+    background-color: black;
+    width:100%;
+    margin: auto;
+    height:50px;
+    padding:5px;
+}
+#two>p{
+    margin-left: 180px;
+}
+#play{
+    display:flex;
+    
+    gap:20px;
+}
+#play>img{
+    width:30%;
+    border:1px solid white;
+    margin-bottom: 15px;
+}
+
+#social{
+    display:flex;
+    gap:20px;
+}
+#social>a{
+   
+    font-size: 25px;
+    color:white;
+}
+#social>a:hover{
+    color:rgb(140, 140, 140);
+}
+.vendor>button{
+    border:none;
+    background-color: rgb(40, 40, 40);
+    color:whitesmoke;
+    padding:8px;
+    border-radius: 3px;
+    margin-top:5px;
+
+}
+.vendor>button:hover{
+    background-color: whitesmoke;
+    color:black;
+}
+#cities{
+    width:73%;
+    margin:auto;
+    text-align: center;
+    line-height: 25px;
+}
+#cities>h4{
+    color:white;
+}
+#cities>p{
+    color:white;
+}
+#popular{
+    width:73%;
+    margin:auto;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    color:white;
+
+}
+
+#pop{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    color:white;
+}
+#pop>div{
+    margin-top:-15px;
+    margin-bottom: 20px;
+   
+}
+#pop>div>a{
+    color:white;
+   
+   
+}
+#pop>div>a:hover{
+    text-decoration: underline;
+}

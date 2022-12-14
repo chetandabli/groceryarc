@@ -68,13 +68,43 @@ data.forEach((el)=>{
     let image = document.createElement("img");
     image.setAttribute("class","p_image");
     image.src=el.image_url;
+
     let proname =document.createElement("p");
     proname.setAttribute("class","proname");
-    proname.innerText=el.proName;
-    let details =document.createElement("p");
-    proname.innerText=el.detail;
+    proname.innerText = el.proName;
 
-    div.append(discount,image,proname,details);
+   
+    let details =document.createElement("p");
+    details.setAttribute("class","details")
+    details.innerText=el.detail;
+
+    let rating =document.createElement("p");
+    rating.setAttribute("class","rating");
+    rating.innerText=el.rate;
+
+    let select =document.createElement("select");
+    select.setAttribute("class","select");
+    select.innerHTML=el.select;
+
+    let div2 =document.createElement("div");
+    div2.setAttribute("class","div2");
+
+    let price =document.createElement("p");
+    price.setAttribute("class","price");
+    price.innerHTML=`<span id="mrp">MRP:</span><span id="strike">${el.strike}</span><span id="price">RS.${el.price}</span>`;
+
+    let delivery =document.createElement("p");
+    delivery.setAttribute("class","delivery");
+    delivery.innerText=el.common;
+
+    let div4=document.createElement("div");
+    div4.setAttribute("class","div4");
+    div4.innerHTML=`<div class="qty">Qty</div><input id="quant" type="text" value="${el.quant}">
+    <button id="add">Add</button>`
+   
+
+    div2.append(price, delivery,div4)
+    div.append(discount, image, proname, details, rating, select, div2);
     cont.append(div);
 })
 

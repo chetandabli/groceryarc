@@ -2,7 +2,7 @@ import { getId, creEle } from "./shortcuts.js";
 
 ///////////////////// navbar ///////////////////////
 ////////////////////////////////////////////////////
-import navbar from "../components/navbar.js";
+import {navbar, mNavbar} from "../components/navbar.js";
 document.getElementById("master_navbar").innerHTML = navbar();
 
 //scroll functionality
@@ -660,10 +660,6 @@ function thirdMenus(data) {
   });
 }
 
-getId("dropdown_menu").addEventListener("click", () => {
-  console.log("fucked");
-});
-
 var isOnDiv = false;
 var isInPopMenu = false;
 
@@ -809,4 +805,38 @@ function append(data) {
 document.getElementById("search").addEventListener("input", debouncing);
 getId("search_results").addEventListener("mouseleave", ()=>{
   getId("search_results").innerHTML = null;
-})
+});
+
+// responsiveness for mobile devices
+
+// media query event handler
+if (matchMedia) {
+  const mq = window.matchMedia("(max-width: 749px)");
+  mq.addEventListener("change", ()=>{
+    WidthChange(mq);
+  });
+ 
+  }
+  
+  // media query change
+  function WidthChange(mq) {
+  if (mq.matches) {
+    
+    document.getElementById("master_navbar").innerHTML = mNavbar();
+  // window width is at least 500px
+  } else {
+    console.log("fuck")
+    document.getElementById("master_navbar").innerHTML = navbar();
+  }
+  
+  }
+
+  // getId("top_menu_mobile_first").addEventListener("click", ()=>{
+  //   categories.forEach((el) => {
+  //     let p = creEle("a");
+  //     p.href = "./product_pages/product.html";
+  //     p.innerText = Object.keys(el)[0];
+  //     console.log(el[`${Object.keys(el)}`]);
+  //     getId("mobile_menu").append(p);
+  //   });
+  // })

@@ -46,6 +46,7 @@ footer_new.innerHTML=footer();
 
 let url="http://localhost:3000/fruitsVeg";
 
+let main_url ="http://localhost:3000"
 let get_data=async()=>{
 
     let res=await fetch(`${url}`)
@@ -99,9 +100,28 @@ data.forEach((el)=>{
 
     let div4=document.createElement("div");
     div4.setAttribute("class","div4");
-    div4.innerHTML=`<div class="qty">Qty</div><input id="quant" type="text" value="${el.quant}">
-    <button id="add">Add</button>`
-   
+    div4.innerHTML=`<div class="qty">Qty</div><input class="quant" type="text" value="${el.quant}">`
+    
+    let add=document.createElement("button");
+    add.setAttribute("class","add");
+    add.innerText="Add";
+    
+    add.onclick= async()=>{
+
+        let res =await fetch(`${main_url}/cart`,{
+            method :"POST",
+            body: JSON.stringify(el),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
+
+        let daat = await res.json();
+        console.log(daat)
+    }
+    // <button class="add">Add</button>`
+     
+    div4.append(add)
 
     div2.append(price, delivery,div4)
     div.append(discount, image, proname, details, rating, select, div2);

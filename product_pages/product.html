@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
-</head>
-<body>
-    <div id="navbar">
-        
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Grocery Shopping and Online Supermarket in India - bigbasket</title>
+        <link rel="stylesheet" href="../styles/style.css">
+        <!-- navbar links -->
+        <link rel="stylesheet" href="../styles/navbar.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <!-- footer links -->
+        <script
+        src="https://kit.fontawesome.com/24c494a6b6.js"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../styles/footer.css">
+        <link rel="stylesheet" href="../styles/product.css">
+    </head>
+    <body>
+        <div id="master_navbar"></div>
+        <!-- product -->
+       <div id="product">
+        <div id="lhs"></div>
+        <div id="rhs">
+            <div id="top">
+
+           
+            <h2 id="heading">
+Fruits & vegetables <span id="f&v"></span>
+            </h2>
+            <select name="popularty" id="sort">
+                <option id="popularity" value="popularty">popularty</option>
+                <option id="sortlth" value="Price-Low to High">Price-Low to High</option>
+                <option id="sorthtl" value="Price-High to Low">Price-High to Low</option>
+                <option id="alpha" value="alphabetical">Alphabetical</option>
+                
+            </select>
+        </div>
+        <div id="container">
+
+        </div>
+        </div>
+       </div>
+
+        <div id="footer"></div>
+    <!-- footer section -->
+    <div id="footer"></div>
+
+    <!-- JS files Navbar-->
+    <script type="module" src="../scripts/navbar.js"></script>    
+    </body>
 </html>
-<script type="module" src="./product.js"></script>
+<script type="module" src="../scripts/product.js"></script>
+

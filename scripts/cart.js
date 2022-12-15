@@ -1,0 +1,82 @@
+import { getId, creEle } from "./shortcuts.js";
+
+///////////////////// navbar ///////////////////////
+////////////////////////////////////////////////////
+import navbar from "../components/navbar.js";
+document.getElementById("master_navbar").innerHTML = navbar();
+
+
+
+
+import { footer } from "../components/footer.js";
+let footer_new = document.getElementById("footer");
+footer_new.innerHTML = footer();
+
+
+
+let url="http://localhost:3000/cart";
+
+let main_url ="http://localhost:3000"
+let get_data=async()=>{
+
+    let res=await fetch(`${url}`)
+    let data= await res.json();
+    console.log(data)
+    append_data(data)
+}
+
+get_data();
+
+
+
+const append_data=(data)=>{
+let cont = document.getElementById("cart");
+cont.innerHTML=null;
+data.forEach((el)=>{
+    let div =document.createElement("div");
+    div.setAttribute("class","product_div");
+    
+    let image = document.createElement("img");
+    image.setAttribute("class","p_image");
+    image.src=el.image_url;
+
+    let details =document.createElement("p");
+    details.setAttribute("class","details")
+    details.innerText=el.detail;
+
+
+    let price =document.createElement("p");
+    price.setAttribute("class","price");
+    price.innerHTML=`<span id="mrp">MRP:</span><span id="strike">${el.strike}</span><span id="price">RS.${el.price}</span>`;
+
+
+    let div4=document.createElement("div");
+    div4.setAttribute("class","div4");
+    div4.innerHTML=`<div class="qty">Qty</div><input class="quant" type="text" value="${el.quant}">`
+    
+    let add=document.createElement("button");
+    add.setAttribute("class","remove");
+    add.innerText="Remove";
+    
+    add.onclick= async(id)=>{
+
+        let res =await fetch(`${main_url}/${id}`,{
+            method :"DELETE",
+           
+        })
+
+        let daat = await res.json();
+        console.log(daat)
+    }
+    // <button class="add">Add</button>`
+     
+    div4.append(add)
+
+    //div2.append(price,div4)
+    div.append(image,details, price,add);
+    cont.append(div);
+})
+
+
+
+}

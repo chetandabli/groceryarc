@@ -1,46 +1,59 @@
-import {getId, creEle} from "./shortcuts.js"
-
-// navbar
-import navbar from "../components/navbar.js";
-document.getElementById("master_navbar").innerHTML = navbar()
-let navBaronScroll = getId("master_navbar")
-let logo = getId("nav_logo")
-let logonearbybutton = getId("scroll_time_menu_button")
-let topminiBar = getId("nav_topmost_section");
-let menu = getId("nav_menu")
-
-window.onscroll = ()=>{
-    if(window.pageYOffset>= menu.offsetTop){
-        logo.style.height = "60px"
-        logonearbybutton.innerHTML = `<p> SHOP <span id="drop_down_menu_collaps">▽</span></p>`
-        topminiBar.innerHTML = null;
-        topminiBar.style.height = "0px"
-        menu.innerHTML = null;
-        menu.style.height = "0px"
-        navBaronScroll.style.boxShadow = "0 0 2rem 0 rgba(0, 0, 0, 0.1)"
-    }else{
-        logo.style.height = "91px"
-        logonearbybutton.innerHTML = null;
-        topminiBar.style.height = "27px";
-        topminiBar.innerHTML = `<img src="./images/logo heading.png" alt="">
-        <p><i class="bi bi-telephone"></i> 1860 123 1000</p>
-        <p><i class="bi bi-geo-alt"></i> Address <span id="nav_address_sign">▽</span></p>
-        <p id="login_button_nav"><i class="bi bi-person"></i> Login/Sign Up </p>`
-        menu.style.height = "36px"
-        menu.innerHTML = `<div id="dropdown_menu">
-        <p>SHOP BY CATEGORY</p>
-        <P>▽</P>
-    </div>
-    <div id="nav_offers_button">
-        <a href="/offers.html"><i class="bi bi-tag-fill" style="color: #DA251D;"></i>OFFERS</a>
-    </div>`
-    }
-}
 
 
-//footer
+///////////// footer ///////////////////////
+/////////////////////////////////////////////
 import { footer } from "../components/footer.js";
-let footer_new=document.getElementById("footer");
-footer_new.innerHTML=footer();
+let footer_new = document.getElementById("footer");
+footer_new.innerHTML = footer();
 
+//home section
+{
+  let id;
+  let slide_div = document.getElementById("slide");
+  const images = [
+    "https://www.bigbasket.com/media/uploads/banner_images/YXHP144_hp_fom_m_bbpl-staples_460_121222_Bangalore.jpg",
+    "https://www.bigbasket.com/media/uploads/banner_images/hp_m_Dairy_460px-011222.jpg",
+    "https://www.bigbasket.com/media/uploads/banner_images/hp_m_GOURMETPL_SnackswithNoLimits_460px-011222.jpg",
+    "https://www.bigbasket.com/media/uploads/banner_images/Cp_m_GM_EPBanner_460-051222.jpg",
+  ];
+  let imgElement = document.createElement("img");
+  imgElement.src = images[0];
+  slide_div.append(imgElement);
+  let i = 1;
+  function slide() {
+    id = setInterval(function () {
+      if (i === images.length) {
+        i = 0;
+      }
+      imgElement.src = images[i];
+      slide_div.append(imgElement);
+      i++;
+    }, 2000);
+  }
+  slide();
 
+  let di;
+  let show_div = document.getElementById("show");
+  const img = [
+    "https://www.bigbasket.com/media/uploads/banner_images/hp_bcd_m_bcd_251122_400.jpg",
+    "https://www.bigbasket.com/media/uploads/banner_images/hp_m_babycare_251122_400.jpg",
+    "https://www.bigbasket.com/media/uploads/banner_images/hp_m_petstore_251122_400.jpg",
+    "https://www.bigbasket.com/media/uploads/banner_images/hp_m_health_suppliment_251122_400.jpg",
+  ];
+
+  let imgel = document.createElement("img");
+  imgel.src = img[0];
+  show_div.append(imgel);
+  let j = 1;
+  function show() {
+    di = setInterval(function () {
+      if (j === img.length) {
+        j = 0;
+      }
+      imgel.src = img[j];
+      show_div.append(imgel);
+      j++;
+    }, 2000);
+  }
+  show();
+}

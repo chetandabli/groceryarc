@@ -1,0 +1,32 @@
+#product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+}
+#lhs{
+    flex: 1;
+    border: 1px solid red;
+    margin-right: 10px;
+}
+#rhs{
+    flex: 8;
+}
+#top{
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+    border: 1px solid black;
+
+}
+
+.div4{
+    display: flex;
+}

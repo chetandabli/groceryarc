@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "json-server": "^0.17.1"
+  },
+  "name": "creepy-territory-8528",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chetandabli/creepy-territory-8528.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chetandabli/creepy-territory-8528/issues"
+  },
+  "homepage": "https://github.com/chetandabli/creepy-territory-8528#readme",
+  "description": ""
+}

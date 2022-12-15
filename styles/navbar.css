@@ -115,7 +115,85 @@ body{
     top: 44px;
     width: 550px;
     height: auto;
-    background-color: #4a4a4a;
+    max-height: 600px;
+    background-color: #fdf1f1;
+    z-index: 1;
+    box-shadow: 0 0 -1px 0 rgb(0, 0, 0.2);
+}
+/* search result pop up */
+.topMassage{
+    border: .1px solid gray;
+    border-top: none;
+    height: 30px;
+    margin: 0;
+    font-size: 14px;
+    align-items: center;
+    display: flex;
+
+}
+.buttomMassage{
+    border: .1px solid gray;
+    border-top: none;
+    height: auto;
+    padding: 10px 0;
+    margin: 0;
+    color: #000000;
+    text-align: center;
+    font-weight: 500;
+}
+.buttomMassage:hover{
+    font-weight: 600;
+    color: #4a4a4a;
+    cursor: pointer;
+}
+.search_res_box{
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    border: .1px solid gray;
+    border-top: none;
+}
+.search_res_box:hover{
+    cursor: pointer;
+    background-color: #fff;
+}
+.search_res_box>div>img{
+    padding: 2px 10px;
+}
+.search_res_box>div{
+    display: flex;
+}
+.search_res_box>:first-child{
+    display: flex;
+    width: 70%;
+}
+.brand_name>:first-child{
+    margin: 0;
+    padding-top: 3px;
+    font-size: 12px;
+}
+.brand_name>:last-child{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+.price_div{
+    display: flex;
+    padding: 0 15px;
+    width: 60%;
+}
+.price_div>:first-child{
+    font-weight: 600;
+    color: #84c225;
+}
+.price_div>:last-child{
+    font-size: 12px;
+    padding: 5px;
+}
+.search_res_button{
+    font-size: 12px;
+    margin: 5px;
 }
 #cart_div_master{
     position: relative;
@@ -222,7 +300,6 @@ body{
 #firstMenus>a:hover{
     background-color: #f2f2f2;
     font-weight: 600;
-    
 }
 #firstMenus>:first-child{
     background-color: #f2f2f2;

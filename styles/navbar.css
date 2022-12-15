@@ -87,12 +87,13 @@ body{
     height: 32px;
     border: .5px solid gray;
     margin: 10px 0 20px 0;
+    display: flex;
 }
 
 #search{
     width: 480px;
     height: 30px;
-    padding: 0 12px;
+    padding: 0 14px;
     outline: none;
     border: none;
 }
@@ -148,10 +149,14 @@ body{
     font-size: 13px;
     font-weight: 500;
 }
+
+/************ nav menu ****************/
 #nav_menu{
     display: flex;
     height: 36px;
-    border: 1px solid #f2f2f2;;
+    border: 1px solid #f2f2f2;
+    position: relative;
+    visibility: visible;
 }
 #dropdown_menu{
     width: 245px;
@@ -160,15 +165,6 @@ body{
     justify-content: space-between;
     margin: 0;
     align-items: center;
-    position: relative;
-}
-#menus_master{
-    position: absolute;
-    left: 0;
-    top: 36px;
-    width: 500px;
-    height: auto;
-    background-color: #a13f3f
 }
 #dropdown_menu>p{
     padding: 0 8px 0 5px;
@@ -193,3 +189,118 @@ body{
     font-size: 14px;
 }
 
+#firstMenus>{
+    width: 245px;
+}
+#firstMenus>a, #secondMenus>a, #thirdMenus>a, #lastMenus>a{
+    display: block;
+}
+
+/* ******** pop up menu ********* */
+#menus_master{
+    position: absolute;
+    left: 0;
+    top: 36px;
+    width: 1200px;
+    height: auto;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0 0 1px 0 rgb(0, 0, 0.2);
+}
+#firstMenus{
+    background-color: #fff;
+    margin: 0;
+    width: 245px;
+}
+#firstMenus>a{
+    box-shadow: 0 0 1px 0 rgb(0, 0, 0.2);
+    color: #555;
+    font-size: 14px;
+    padding: 7px 0px 7px 7px;
+    border: 1px solid transparent;
+}
+#firstMenus>a:hover{
+    background-color: #f2f2f2;
+    font-weight: 600;
+    
+}
+#firstMenus>:first-child{
+    background-color: #f2f2f2;
+    font-size: 14px;
+    padding: 7px 0px 7px 7px;
+    border: 1px solid transparent;
+    font-weight: 600;
+}
+#secondMenus{
+    background-color: #f2f2f2;
+    margin: 0;
+    line-height: 14px;
+    border: none;
+    font-size: 14px;
+    width: 230px;
+}
+#secondMenus>a{
+    font-size: 14px;
+    padding: 5px 0 5px 5px;
+    color: #222222;
+
+}
+#secondMenus>:first-child{
+    background-color: #fff;
+    font-size: 14px;
+    padding: 5px 0 5px 5px;
+    color: #222222;
+
+}
+#secondMenus>a:hover{
+    font-size: 15px;
+    font-weight: 500;
+}
+#secondMenus>:hover{
+    background-color: #fff;
+}
+
+#thirdMenus{
+    background-color: #fff;
+    padding-left: 15px;
+    margin: 0;
+    width: 225px;
+}
+#thirdMenus>:first-child{
+    padding-top: 10px;
+}
+#thirdMenus>a, #lastMenus>a{
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    padding: 2px, 0;
+    border: none;
+    line-height: 23px;
+    color: #222222;
+}
+#thirdMenus>a:hover, #lastMenus>a:hover{
+    cursor: pointer;
+    font-size: 13px;
+    color: #84c225;
+}
+
+#lastMenus{
+    width: 300px;
+    background-color: #fff;
+    padding-left: 15px;
+    margin: 0;
+}
+#lastMenus>p{
+    padding: 10px 0 0 0;
+    margin: 0;
+    color: #84c225;
+}
+#lastMenus>a{
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    padding: 2px, 0;
+    border: none;
+    line-height: 23px;
+    color: #222222;
+}

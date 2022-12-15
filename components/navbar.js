@@ -2,12 +2,12 @@ const navbar = ()=>{
     return `<div id="navbar">
     <div id="nav_main">
         <div id="nav_logo">
-            <img src="./images/GA (2).png" alt="logo">
+            <img src="https://i.ibb.co/Kqh1BZB/GA-2.png" alt="logo">
             <div id="scroll_time_menu_button"></div>
         </div>
         <div id="nav_remain">
             <div id="nav_topmost_section">
-                <img src="./images/logo heading.png" alt="">
+                <img src="https://i.ibb.co/98XxQs0/logo-heading.png" alt="">
                 <p><i class="bi bi-telephone"></i> 1860 123 1000</p>
                 <p><i class="bi bi-geo-alt"></i> Address <span id="nav_address_sign">▽</span></p>
                 <p id="login_button_nav"><i class="bi bi-person"></i> Login/Sign Up </p>

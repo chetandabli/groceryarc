@@ -2045,18 +2045,46 @@
   ],
   "cart": [
     {
-      "off": "Get 20% off ✹",
-      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000102_17-fresho-cucumber.jpg",
+      "off": "Get 25% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg",
       "proName": "Fresho",
-      "detail": "Cucumber",
-      "rate": 4.1,
-      "select": "<option>1 kg Pouch- Rs.21</option>",
-      "price": 21,
-      "strike": "Rs.27",
+      "detail": "Cauliflower",
+      "rate": 4.5,
+      "select": "<option>1 pc - Rs. 13 </option>",
+      "price": 13,
+      "strike": "Rs.17",
       "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
       "quant": 1,
       "category": "fruitsVeg",
-      "id": 8
+      "id": 1
+    },
+    {
+      "off": "Get 20% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000070_15-fresho-carrot-orange.jpg",
+      "proName": "Fresho",
+      "detail": "Carrot - Orange",
+      "rate": 4,
+      "select": "<option>1 kg  - Rs. 36</option>",
+      "price": 36,
+      "strike": "Rs.46",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 2
+    },
+    {
+      "off": "Get 20% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000284_11-fresho-green-peas.jpg",
+      "proName": "Fresho",
+      "detail": "Green Peas",
+      "rate": 4.4,
+      "select": "<option>1 kg Pack - Rs. 99</option>",
+      "price": 99,
+      "strike": "Rs.123",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 3
     }
   ],
   "user": []

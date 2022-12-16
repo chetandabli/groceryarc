@@ -65,7 +65,7 @@ data.forEach((el,id)=>{
 })
 
 
-
+//delete
 
 let removeproduct= async(id)=>{
     let res=await fetch(`${main_url}/${id}`,{
@@ -77,3 +77,4 @@ let removeproduct= async(id)=>{
 }
 
 }
+

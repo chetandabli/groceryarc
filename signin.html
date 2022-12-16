@@ -20,17 +20,19 @@
 <div id="master_navbar"></div>
      <!-- signin part start -->
 
-    <div id="container">
-        <h2>Sign In</h2>
-        <div id="second-part">
-        <label>Username*</label><br>
-        <input type="text" id="login-username" class="input" placeholder="Username" required /><br>
-        <label>Password*</label><br>
-        <input type="text" id="login-password" class="input" placeholder="Password" required/><br>
-        </div>
-        
-        <p>By tapping Submit, you agree to our Privacy Policy and Terms & Conditions.</p>
-        <button id="login" class="button">Submit</button>
+    <div id="login">
+        <form action="">
+            <h2 id="extra">Sign In</h2>
+            <div id="second-part">
+                <label>Username*</label><br>
+                <input type="text" id="login-username" class="input" placeholder="Username" required /><br>
+                <label>Password*</label><br>
+                <input type="text" id="login-password" class="input" placeholder="Password" required/><br>
+            </div>
+            
+            <p>By tapping Submit, you agree to our Privacy Policy and Terms & Conditions.</p>
+            <input type="submit" id="registerbtn" value="Submit">
+        </form>
         <!-- <button id="tap" class="button"><a class="button" href="signup.html">Sign Up</a></button> -->
     </div>
 
@@ -44,4 +46,4 @@
 </body>
 </html>
 
-<script type="module" src="signin.js"></script>
+<script type="module" src="./scripts/signin.js"></script>

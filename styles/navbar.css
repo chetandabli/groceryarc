@@ -477,4 +477,6 @@ body{
 #top_search_mobile>div>button>i{
     width: 90%;
 }
-
+.mobile_support{
+    z-index: 5;
+}

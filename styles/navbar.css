@@ -148,7 +148,7 @@ body{
 }
 .search_res_box{
     display: flex;
-    height: 50px;
+    height: 45px;
     justify-content: space-between;
     border: .1px solid gray;
     border-top: none;
@@ -215,7 +215,7 @@ body{
 }
 #nav_basket{
     font-size: 40px;
-    color: #DA251D;
+    color: #86df00;
 }
 
 #nav_cart>:last-child{
@@ -477,4 +477,6 @@ body{
 #top_search_mobile>div>button>i{
     width: 90%;
 }
-
+.mobile_support{
+    z-index: 5;
+}

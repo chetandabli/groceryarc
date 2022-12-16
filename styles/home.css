@@ -1,79 +1,148 @@
 * {
-    font-family: sans-serif;
+  font-family: sans-serif;
+}
+#slide {
+  /* background-color: rebeccapurple; */
+  width: 80%;
+  margin: auto;
+}
+#slide img {
+  width: 100%;
+}
+#pass {
+  text-align: center;
+  padding: 2rem;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+}
+#bank {
+  margin: auto;
+  width: 80%;
+  gap: 1rem;
+  /* background-color: rebeccapurple; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+#bank img {
+  width: 100%;
+}
+#offers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  margin: auto;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+#offers img {
+  width: 100%;
+  /* border: 1px solid black; */
+}
+#fruits,
+#staples,
+#snacks {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 80%;
+  margin: auto;
+  cursor: pointer;
+}
+#fruits img,
+#staples img,
+#snacks img {
+  width: 100%;
+}
+#clean {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  margin: auto;
+  cursor: pointer;
+}
+#clean img {
+  width: 100%;
+}
+#show {
+  /* background-color: red; */
+  padding: 1rem;
+  width: 80%;
+  margin: auto;
+}
+#show img {
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+/* media  */
+
+@media only screen and (max-width: 778px) {
+  #range_holder,
+  #offers,
+  #bank,
+  #fruits {
+    display: flex;
+    flex-direction: column;
   }
-  #slide {
-    /* background-color: rebeccapurple; */
-    width: 80%;
-    margin: auto;
+}
+
+#starRating {
+  width: 70px;
+  /* height: 50px; */
+}
+@media only screen and (max-width: 1058px) {
+  #container {
+    margin-top: 15rem;
   }
-  #slide img {
-    width: 100%;
-  }
-  #pass {
-    text-align: center;
-    padding: 2rem;
-    margin: auto;
-  }
-  h2 {
-    text-align: center;
-  }
-  #bank {
-    margin: auto;
-    width: 80%;
-    gap: 1rem;
-    /* background-color: rebeccapurple; */
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  #bank img {
-    width: 100%;
-  }
-  #offers {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 80%;
-    margin: auto;
-    margin-top: 1rem;
-    gap: 1rem;
-  }
-  #offers img {
-    width: 100%;
-    /* border: 1px solid black; */
-  }
+}
+@media only screen and (min-width: 750px) and (max-width: 1000px) {
+  #content,
+  #bank,
+  #offers,
   #fruits,
   #staples,
-  #snacks {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    width: 80%;
-    margin: auto;
-    cursor: pointer;
-  }
-  #fruits img,
-  #staples img,
-  #snacks img {
-    width: 100%;
-  }
+  #snacks,
+  #pass,
   #clean {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 80%;
-    margin: auto;
-    cursor: pointer;
+    grid-template-columns: repeat(3, 1fr);
   }
-  #clean img {
-    width: 100%;
+}
+@media only screen and (min-width: 450px) and (max-width: 750px) {
+  #content,
+  #bank,
+  #offers,
+  #fruits,
+  #staples,
+  #snacks,
+  #clean {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
-  #show {
-    /* background-color: red; */
-    padding: 1rem;
-    width: 80%;
-    margin: auto;
+  .card-price-btn {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid yellow; */
+    flex-direction: column;
+    /* margin-top: 65px; */
   }
-  #show img {
-    width: 100%;
-    /* border: 1px solid black; */
+  .prise_btn_div {
+    flex-direction: column;
+    gap: 1rem;
   }
-  
+}
+@media only screen and (max-width: 450px) {
+  #content,
+  #bank {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    min-height: 20rem;
+  }
+  .prise_btn_div {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

@@ -238,18 +238,18 @@ const categories = [
     },
 ]
 
-import { getId, creEle } from "./shortcuts.js";
+// import { getId, creEle } from "./shortcuts.js";
 
-const menusShow = ()=>{
-    let menus = getId("menus_main");
-    menus.innerHTML = null;
-    categories.forEach((el)=>{
-        let main = creEle("div");
-        main.onmouseover = ()=>{
+// const menusShow = ()=>{
+//     let menus = getId("menus_main");
+//     menus.innerHTML = null;
+//     categories.forEach((el)=>{
+//         let main = creEle("div");
+//         main.onmouseover = ()=>{
 
-        };
-        let p = creEle("p");
-        p.innerText = el[0]
-    })
-}
+//         };
+//         let p = creEle("p");
+//         p.innerText = el[0]
+//     })
+// }
 

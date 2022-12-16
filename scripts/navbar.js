@@ -8,6 +8,9 @@ getId("master_navbar").innerHTML = navbar();
 getId("nav_logo_img").addEventListener("click", ()=>{
   location.href = "../index.html"
 })
+getId("nav_cart").addEventListener("click", ()=>{
+  location.href = "../cart.html"
+})
 
 //scroll functionality
 let navBaronScroll = getId("master_navbar");

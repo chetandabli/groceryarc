@@ -22,7 +22,8 @@ const navbar = ()=>{
                 </div>
                 <div id="cart_div_master">
                     <div id="nav_cart">
-                        <div id="nav_basket"><i class="bi bi-basket2-fill"></i></div>
+                        <div id="nav_basket">
+                        <a href="./cart.html"><i class="bi bi-basket2-fill"></i></a></div>
                         <div>
                             <p>My Basket</p>
                             <p id="nav_cart_item_count">0 items</p>

@@ -1,3 +1,11 @@
+*{
+    font-family: "Brandon Text", Arial, sans-serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 .container{
     border:0px solid red;
     width:250px;

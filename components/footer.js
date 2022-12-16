@@ -13,8 +13,7 @@
 
 
 const footer = () => {
-    return `
-<div id="footr">
+    return `<div id="footr">
     <div id="one">
         <div>
             <h4>Groceryarc

@@ -2046,17 +2046,45 @@
   "cart": [
     {
       "off": "Get 20% off ✹",
-      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000102_17-fresho-cucumber.jpg",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg",
       "proName": "Fresho",
-      "detail": "Cucumber",
+      "detail": "Onion",
       "rate": 4.1,
-      "select": "<option>1 kg Pouch- Rs.21</option>",
-      "price": 21,
-      "strike": "Rs.27",
+      "select": "<option>5 kg - Rs.131</option>",
+      "price": 131,
+      "strike": "Rs.165",
       "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
       "quant": 1,
       "category": "fruitsVeg",
-      "id": 8
+      "id": 1
+    },
+    {
+      "off": "Get 42% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000204_16-fresho-tomato-local.jpg",
+      "proName": "Fresho",
+      "detail": "Tomato - Local",
+      "rate": 4,
+      "select": "<option>500 gm - Rs. 5</option>",
+      "price": 5,
+      "strike": "Rs.9",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 2
+    },
+    {
+      "off": "Get 20% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000263_12-fresho-strawberry.jpg",
+      "proName": "Fresho",
+      "detail": "Strawberry",
+      "rate": 4.2,
+      "select": "<option>200 gm  - Rs. 55</option>",
+      "price": 55,
+      "strike": "Rs.70",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 3
     }
   ],
   "user": []

@@ -175,6 +175,7 @@ a{
         margin:auto;
         width:95%;
     }
+    
 }
 /* Medium screen display */
 @media all and (min-width:451px) and (max-width:750px){
@@ -213,4 +214,5 @@ a{
         margin:auto;
         width:95%;
     }
+    
 }

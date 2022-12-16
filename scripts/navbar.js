@@ -3,17 +3,6 @@ import { getId, creEle } from "./shortcuts.js";
 ///////////////////// navbar ///////////////////////
 ////////////////////////////////////////////////////
 import { navbar, mNavbar } from "../components/navbar.js";
-getId("master_navbar").innerHTML = navbar();
-
-getId("nav_logo_img").addEventListener("click", () => {
-  location.href = "./index.html";
-});
-getId("nav_cart").addEventListener("click", () => {
-  location.href = "./cart.html";
-});
-getId("login_button_nav").addEventListener("click", () => {
-  location.href = "./signin.html";
-});
 
 // menu pop up functionality
 var categories = [
@@ -777,6 +766,15 @@ if (mediaQueryList.matches) {
 } else {
   flag = true;
   document.getElementById("master_navbar").innerHTML = navbar();
+  getId("nav_logo_img").addEventListener("click", () => {
+    location.href = "./index.html";
+  });
+  getId("nav_cart").addEventListener("click", () => {
+    location.href = "./cart.html";
+  });
+  getId("login_button_nav").addEventListener("click", () => {
+    location.href = "./signin.html";
+  });
   document.getElementById("search").addEventListener("input", debouncing);
   getId("search_results").addEventListener("mouseleave", () => {
     getId("search_results").innerHTML = null;
@@ -886,6 +884,15 @@ function WidthChange(mq) {
     flag = true;
     document.getElementById("master_navbar").innerHTML = navbar();
     document.getElementById("search").addEventListener("input", debouncing);
+    getId("nav_logo_img").addEventListener("click", () => {
+      location.href = "./index.html";
+    });
+    getId("nav_cart").addEventListener("click", () => {
+      location.href = "./cart.html";
+    });
+    getId("login_button_nav").addEventListener("click", () => {
+      location.href = "./signin.html";
+    });
     getId("search_results").addEventListener("mouseleave", () => {
       getId("search_results").innerHTML = null;
     });

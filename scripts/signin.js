@@ -11,7 +11,7 @@ async function LoginFunction(event){
         for(let i=0;i<all_login_input.length-1;i++){
             obj[all_login_input[i].id] = all_login_input[i].value;
         }
-        console.log(obj);
+        // console.log(obj);
         let login_request = await fetch("http://localhost:3000/user",{
             
         })

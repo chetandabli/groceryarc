@@ -3,7 +3,11 @@ import { getId, creEle } from "./shortcuts.js";
 ///////////////////// navbar ///////////////////////
 ////////////////////////////////////////////////////
 import {navbar, mNavbar} from "../components/navbar.js";
-document.getElementById("master_navbar").innerHTML = navbar();
+getId("master_navbar").innerHTML = navbar();
+
+getId("nav_logo_img").addEventListener("click", ()=>{
+  location.href = "../index.html"
+})
 
 //scroll functionality
 let navBaronScroll = getId("master_navbar");
@@ -615,7 +619,7 @@ const menusShow = () => {
   getId("lastMenus").innerHTML = null;
   categories.forEach((el) => {
     let p = creEle("a");
-    p.href = "./product_pages/product.html";
+    p.href = "../product_pages/product.html";
     p.innerText = Object.keys(el)[0];
     console.log(el[`${Object.keys(el)}`]);
     p.onmouseover = () => {
@@ -636,7 +640,7 @@ function secondMenus(data) {
   let arrayThirdMenu = [];
   data.forEach((item) => {
     let p = creEle("a");
-    p.href = "./product_pages/product.html";
+    p.href = "../product_pages/product.html";
     p.innerText = Object.keys(item)[0];
 
     p.onmouseover = () => {
@@ -653,7 +657,7 @@ function thirdMenus(data) {
   getId("thirdMenus").innerHTML = null;
   data.forEach((el) => {
     let p = creEle("a");
-    p.href = "./product_pages/product.html";
+    p.href = "../product_pages/product.html";
     p.innerText = el;
 
     getId("thirdMenus").append(p);
@@ -798,7 +802,7 @@ function append(data) {
   });
   let buttomMassage = creEle("p");
   buttomMassage.classList = "buttomMassage"
-  buttomMassage.innerText = `VIEW ALL PRODUCTS(${i+1})`;
+  buttomMassage.innerText = `VIEW ALL PRODUCTS(${i})`;
   getId("search_results").append(buttomMassage)
 }
 

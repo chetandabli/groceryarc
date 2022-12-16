@@ -22,7 +22,8 @@ const navbar = ()=>{
                 </div>
                 <div id="cart_div_master">
                     <div id="nav_cart">
-                        <div id="nav_basket"><i class="bi bi-basket2-fill"></i></div>
+                        <div id="nav_basket">
+                        <a href="./cart.html"><i class="bi bi-basket2-fill"></i></a></div>
                         <div>
                             <p>My Basket</p>
                             <p id="nav_cart_item_count">0 items</p>
@@ -51,4 +52,36 @@ const navbar = ()=>{
 </div>`
 }
 
-export default navbar
+const mNavbar = ()=>{
+    return `<div id="top_menu_mobile">
+    <div id="top_menu_mobile_first">
+      <div id="mobile_menu_lines">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div id="mobile_menu"></div>
+    </div>
+    <div id="top_menu_mobile_second">
+      <i class="bi bi-person"></i>
+    </div>
+    <div id="top_menu_mobile_third">
+      <img src="https://i.ibb.co/Kqh1BZB/GA-2.png" alt="logo">
+    </div>
+    <div id="top_menu_mobile_fourth">
+      <i class="bi bi-geo-alt"></i>
+    </div>
+    <div id="top_menu_mobile_fifth">
+      <i class="bi bi-cart"></i>
+    </div>
+  </div>
+  <div id="top_search_mobile">
+    <div class="mobile_support">
+      <input class="search" type="text" name="search" id="search" placeholder="Search for Products">
+      <button class="search_button" id="search_button"><i class="bi bi-search" style="color: #fff"></i></button>
+  </div>
+    <div id="search_results"></div>
+  </div>`
+}
+
+export {navbar, mNavbar}

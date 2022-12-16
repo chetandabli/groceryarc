@@ -73,3 +73,44 @@
 #bol{
     font-weight: bold;
 }
+#total-div{
+    width:73%;
+    background-color: black;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    margin:auto;
+    height:80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding:20px;
+    align-items: center;
+    border-radius: 10px;
+}
+#total-div>h2{
+    color:white;
+   
+    font-weight: lighter;
+
+}
+#hed{
+    width:73%;
+    margin:auto;
+    margin-top:30px;
+}
+#checkout{
+    width:250px;
+    font-size: 20px;
+    padding:10px;
+    color:white;
+    background-color: red;
+    border:none;
+    border-radius: 10px;
+    
+}
+#checkout>a{
+    text-decoration: none;
+    color:white;
+}
+#checkout:hover{
+    background-color: rgb(158, 14, 14);
+}

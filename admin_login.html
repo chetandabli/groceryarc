@@ -7,26 +7,54 @@
     <title>Groceryarc || Online Grocery Shopping and Online Supermarket in India</title>
     <link rel="shortcut icon" href="https://i.ibb.co/yhDC2xr/GA.png" type="image/x-icon">
 </head>
-<link rel="stylesheet" href="./styles/signin.css">
+<link rel="stylesheet" href="./styles/adminlogin.css">
 <body>
-
-<!-- Admin Login start -->
-
-<div id="container">
-    <h2>Admin Login</h2>
-    <div id="second-part">
-    <label>Username*</label><br>
-    <input type="text" id="login-username" class="input" placeholder="Username" required /><br>
-    <label>Password*</label><br>
-    <input type="text" id="login-password" class="input" placeholder="Password" required/><br>
+<!-- Navbar section -->
+<div id="navbar_admin">
+    <div id="admin-head">
+        <div>
+            <img src="https://i.ibb.co/Kqh1BZB/GA-2.png" alt="">
+        </div>
+        <div>
+            <p>Admin Panel</p>
+        </div>
+       
+        <div>
+            <a href="./addmin_add_product.html"><button id="ap">Add Products</button></a>
+            <a href="./index.html"><button id="ap">Groceryarc/Home</button></a>
+            <!-- <a href="./admin_login.html"><button id="ap">Log Out</button></a> -->
+            
+            
+        </div>
     </div>
-    
-    
-    <button id="login" class="button"><a id="login" class="button" href="admin_add_product.html">Submit</a></button>
-    
 </div>
 
-<!-- Admin Login end -->
+     <!-- signin part start -->
 
+    <div id="login">
+        <form action="">
+            <h2 id="extra">Admin Sign In</h2>
+            <div id="second-part">
+                <label>Username*</label><br>
+                <input type="text" id="login-username" class="input" placeholder="Username" required /><br>
+                <label>Password*</label><br>
+                <input type="text" id="login-password" class="input" placeholder="Password" required/><br>
+            </div>
+            
+            <p>By tapping Submit, you agree to our Privacy Policy and Terms & Conditions.</p>
+            <input type="submit" id="registerbtn" value="Submit">
+        </form>
+        <!-- <button id="tap" class="button"><a class="button" href="signup.html">Sign Up</a></button> -->
+    </div>
+
+    <!-- signin part end -->
+    <!-- footer section -->
+    <div id="footer_admin">
+        <div id="two">
+            <p>Copyright © 2021-2023 Supermarket Grocery Supplies Pvt Ltd</p>
+        </div>
+</div>
+
+        
 </body>
 </html>

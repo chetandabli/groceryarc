@@ -2045,28 +2045,28 @@
   ],
   "cart": [
     {
-      "off": "Get 25% off ✹",
-      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg",
+      "off": "Get 20% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg",
       "proName": "Fresho",
-      "detail": "Cauliflower",
-      "rate": 4.5,
-      "select": "<option>1 pc - Rs. 13 </option>",
-      "price": 13,
-      "strike": "Rs.17",
+      "detail": "Onion",
+      "rate": 4.1,
+      "select": "<option>5 kg - Rs.131</option>",
+      "price": 131,
+      "strike": "Rs.165",
       "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
       "quant": 1,
       "category": "fruitsVeg",
       "id": 1
     },
     {
-      "off": "Get 20% off ✹",
-      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000070_15-fresho-carrot-orange.jpg",
+      "off": "Get 42% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000204_16-fresho-tomato-local.jpg",
       "proName": "Fresho",
-      "detail": "Carrot - Orange",
+      "detail": "Tomato - Local",
       "rate": 4,
-      "select": "<option>1 kg  - Rs. 36</option>",
-      "price": 36,
-      "strike": "Rs.46",
+      "select": "<option>500 gm - Rs. 5</option>",
+      "price": 5,
+      "strike": "Rs.9",
       "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
       "quant": 1,
       "category": "fruitsVeg",
@@ -2074,18 +2074,20 @@
     },
     {
       "off": "Get 20% off ✹",
-      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000284_11-fresho-green-peas.jpg",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000263_12-fresho-strawberry.jpg",
       "proName": "Fresho",
-      "detail": "Green Peas",
-      "rate": 4.4,
-      "select": "<option>1 kg Pack - Rs. 99</option>",
-      "price": 99,
-      "strike": "Rs.123",
+      "detail": "Strawberry",
+      "rate": 4.2,
+      "select": "<option>200 gm  - Rs. 55</option>",
+      "price": 55,
+      "strike": "Rs.70",
       "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
       "quant": 1,
       "category": "fruitsVeg",
       "id": 3
     }
   ],
+
   "user": []
+
 }

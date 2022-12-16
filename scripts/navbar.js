@@ -15,74 +15,8 @@ getId("login_button_nav").addEventListener("click", () => {
   location.href = "./signin.html";
 });
 
-// responsiveness for mobile devices
-var flag;
-const mediaQueryList = window.matchMedia("(max-width: 750px)");
-
-if (mediaQueryList.matches) {
-  flag = false;
-  document.getElementById("master_navbar").innerHTML = mNavbar();
-} else {
-  flag = true;
-  document.getElementById("master_navbar").innerHTML = navbar();
-}
-// media query event handler
-if (matchMedia) {
-  const mq = window.matchMedia("(max-width: 750px)");
-  mq.addEventListener("change", () => {
-    WidthChange(mq);
-  });
-}
-
-// media query change
-function WidthChange(mq) {
-  if (mq.matches) {
-    flag = false;
-    document.getElementById("master_navbar").innerHTML = mNavbar();
-    // window width is at least 500px
-  } else {
-    flag = true;
-    document.getElementById("master_navbar").innerHTML = navbar();
-  }
-}
-
-//scroll functionality
-let navBaronScroll = getId("master_navbar");
-let logo = getId("nav_logo");
-let logonearbybutton = getId("scroll_time_menu_button");
-let topminiBar = getId("nav_topmost_section");
-let menu = getId("nav_menu");
-
-window.onscroll = () => {
-  if (flag) {
-    if (window.pageYOffset >= menu.offsetTop) {
-      logo.style.height = "60px";
-      logonearbybutton.innerHTML = `<p> SHOP <span id="drop_down_menu_collaps">▽</span></p>`;
-      topminiBar.innerHTML = null;
-      topminiBar.style.height = "0px";
-      menu.style.visibility = "hidden";
-      getId("nav_offers_button").innerHTML = null;
-      menu.style.height = "0px";
-      navBaronScroll.style.boxShadow = "0 0 2rem 0 rgba(0, 0, 0, 0.1)";
-    } else if (window.pageYOffset == 0) {
-      logo.style.height = "91px";
-      logonearbybutton.innerHTML = null;
-      topminiBar.style.height = "27px";
-      menu.style.visibility = "visible";
-      menu.style.height = "36px";
-      getId(
-        "nav_offers_button"
-      ).innerHTML = `<a href="/offers.html"><i class="bi bi-tag-fill" style="color: #DA251D;"></i>OFFERS</a>`;
-      topminiBar.innerHTML = `<img src="https://i.ibb.co/98XxQs0/logo-heading.png" alt="">
-          <p><i class="bi bi-telephone"></i> 1860 123 1000</p>
-          <p><i class="bi bi-geo-alt"></i> Address <span id="nav_address_sign">▽</span></p>
-          <p id="login_button_nav"><i class="bi bi-person"></i> Login/Sign Up </p>`;
-    }
-  }
-};
-
 // menu pop up functionality
-const categories = [
+var categories = [
   {
     "Fruits & Vegatables": [
       {
@@ -706,41 +640,6 @@ function thirdMenus(data) {
 var isOnDiv = false;
 var isInPopMenu = false;
 
-getId("dropdown_menu").addEventListener("mouseover", () => {
-  isOnDiv = true;
-  menusShow();
-});
-getId("dropdown_menu").addEventListener("mouseleave", () => {
-  isOnDiv = false;
-  setTimeout(() => {
-    if (isInPopMenu) {
-    } else {
-      isOnDiv = false;
-      isInPopMenu = false;
-      getId("firstMenus").innerHTML = null;
-      getId("secondMenus").innerHTML = null;
-      getId("thirdMenus").innerHTML = null;
-      getId("lastMenus").innerHTML = null;
-    }
-  }, 1);
-});
-getId("menus_master").addEventListener("mouseover", () => {
-  isInPopMenu = true;
-});
-getId("menus_master").addEventListener("mouseleave", () => {
-  isInPopMenu = false;
-  setTimeout(() => {
-    if (isOnDiv == true) {
-    } else {
-      isInPopMenu = false;
-      getId("firstMenus").innerHTML = null;
-      getId("secondMenus").innerHTML = null;
-      getId("thirdMenus").innerHTML = null;
-      getId("lastMenus").innerHTML = null;
-    }
-  }, 1);
-});
-
 //debouncing, search functionality
 let url = "http://localhost:3000/";
 let paths = [
@@ -850,17 +749,182 @@ async function addToCart(el) {
   }
 }
 
-document.getElementById("search").addEventListener("input", debouncing);
-getId("search_results").addEventListener("mouseleave", () => {
-  getId("search_results").innerHTML = null;
-});
+//massive
+// responsiveness for mobile devices
+var flag;
+const mediaQueryList = window.matchMedia("(max-width: 750px)");
 
-// getId("top_menu_mobile_first").addEventListener("click", ()=>{
-//   categories.forEach((el) => {
-//     let p = creEle("a");
-//     p.href = "./product_pages/product.html";
-//     p.innerText = Object.keys(el)[0];
-//     console.log(el[`${Object.keys(el)}`]);
-//     getId("mobile_menu").append(p);
-//   });
-// })
+if (mediaQueryList.matches) {
+  flag = false;
+  document.getElementById("master_navbar").innerHTML = mNavbar();
+} else {
+  flag = true;
+  document.getElementById("master_navbar").innerHTML = navbar();
+  document.getElementById("search").addEventListener("input", debouncing);
+  getId("search_results").addEventListener("mouseleave", () => {
+    getId("search_results").innerHTML = null;
+  });
+
+  getId("dropdown_menu").addEventListener("mouseover", () => {
+    isOnDiv = true;
+    menusShow();
+  });
+  getId("dropdown_menu").addEventListener("mouseleave", () => {
+    isOnDiv = false;
+    setTimeout(() => {
+      if (isInPopMenu) {
+      } else {
+        isOnDiv = false;
+        isInPopMenu = false;
+        getId("firstMenus").innerHTML = null;
+        getId("secondMenus").innerHTML = null;
+        getId("thirdMenus").innerHTML = null;
+        getId("lastMenus").innerHTML = null;
+      }
+    }, 1);
+  });
+  getId("menus_master").addEventListener("mouseover", () => {
+    isInPopMenu = true;
+  });
+  getId("menus_master").addEventListener("mouseleave", () => {
+    isInPopMenu = false;
+    setTimeout(() => {
+      if (isOnDiv == true) {
+      } else {
+        isInPopMenu = false;
+        getId("firstMenus").innerHTML = null;
+        getId("secondMenus").innerHTML = null;
+        getId("thirdMenus").innerHTML = null;
+        getId("lastMenus").innerHTML = null;
+      }
+    }, 1);
+  });
+
+  //scroll functionality
+  let navBaronScroll = getId("master_navbar");
+  let logo = getId("nav_logo");
+  let logonearbybutton = getId("scroll_time_menu_button");
+  let topminiBar = getId("nav_topmost_section");
+  let menu = getId("nav_menu");
+
+  window.onscroll = () => {
+    if (flag) {
+      if (window.pageYOffset >= menu.offsetTop) {
+        logo.style.height = "60px";
+        logonearbybutton.innerHTML = `<p> SHOP <span id="drop_down_menu_collaps">▽</span></p>`;
+        topminiBar.innerHTML = null;
+        topminiBar.style.height = "0px";
+        menu.style.visibility = "hidden";
+        getId("nav_offers_button").innerHTML = null;
+        menu.style.height = "0px";
+        navBaronScroll.style.boxShadow = "0 0 2rem 0 rgba(0, 0, 0, 0.1)";
+      } else if (window.pageYOffset == 0) {
+        logo.style.height = "91px";
+        logonearbybutton.innerHTML = null;
+        topminiBar.style.height = "27px";
+        menu.style.visibility = "visible";
+        menu.style.height = "36px";
+        getId(
+          "nav_offers_button"
+        ).innerHTML = `<a href="/offers.html"><i class="bi bi-tag-fill" style="color: #DA251D;"></i>OFFERS</a>`;
+        topminiBar.innerHTML = `<img src="https://i.ibb.co/98XxQs0/logo-heading.png" alt="">
+          <p><i class="bi bi-telephone"></i> 1860 123 1000</p>
+          <p><i class="bi bi-geo-alt"></i> Address <span id="nav_address_sign">▽</span></p>
+          <p id="login_button_nav"><i class="bi bi-person"></i> Login/Sign Up </p>`;
+      }
+    }
+  };
+}
+// media query event handler
+if (matchMedia) {
+  const mq = window.matchMedia("(max-width: 750px)");
+  mq.addEventListener("change", () => {
+    WidthChange(mq);
+  });
+}
+
+// media query change
+function WidthChange(mq) {
+  if (mq.matches) {
+    flag = false;
+    document.getElementById("master_navbar").innerHTML = mNavbar();
+    // window width is at least 500px
+  } else {
+    flag = true;
+    document.getElementById("master_navbar").innerHTML = navbar();
+    document.getElementById("search").addEventListener("input", debouncing);
+    getId("search_results").addEventListener("mouseleave", () => {
+      getId("search_results").innerHTML = null;
+    });
+
+    getId("dropdown_menu").addEventListener("mouseover", () => {
+      isOnDiv = true;
+      menusShow();
+    });
+    getId("dropdown_menu").addEventListener("mouseleave", () => {
+      isOnDiv = false;
+      setTimeout(() => {
+        if (isInPopMenu) {
+        } else {
+          isOnDiv = false;
+          isInPopMenu = false;
+          getId("firstMenus").innerHTML = null;
+          getId("secondMenus").innerHTML = null;
+          getId("thirdMenus").innerHTML = null;
+          getId("lastMenus").innerHTML = null;
+        }
+      }, 1);
+    });
+    getId("menus_master").addEventListener("mouseover", () => {
+      isInPopMenu = true;
+    });
+    getId("menus_master").addEventListener("mouseleave", () => {
+      isInPopMenu = false;
+      setTimeout(() => {
+        if (isOnDiv == true) {
+        } else {
+          isInPopMenu = false;
+          getId("firstMenus").innerHTML = null;
+          getId("secondMenus").innerHTML = null;
+          getId("thirdMenus").innerHTML = null;
+          getId("lastMenus").innerHTML = null;
+        }
+      }, 1);
+    });
+
+    //scroll functionality
+    let navBaronScroll = getId("master_navbar");
+    let logo = getId("nav_logo");
+    let logonearbybutton = getId("scroll_time_menu_button");
+    let topminiBar = getId("nav_topmost_section");
+    let menu = getId("nav_menu");
+
+    window.onscroll = () => {
+      if (flag) {
+        if (window.pageYOffset >= menu.offsetTop) {
+          logo.style.height = "60px";
+          logonearbybutton.innerHTML = `<p> SHOP <span id="drop_down_menu_collaps">▽</span></p>`;
+          topminiBar.innerHTML = null;
+          topminiBar.style.height = "0px";
+          menu.style.visibility = "hidden";
+          getId("nav_offers_button").innerHTML = null;
+          menu.style.height = "0px";
+          navBaronScroll.style.boxShadow = "0 0 2rem 0 rgba(0, 0, 0, 0.1)";
+        } else if (window.pageYOffset == 0) {
+          logo.style.height = "91px";
+          logonearbybutton.innerHTML = null;
+          topminiBar.style.height = "27px";
+          menu.style.visibility = "visible";
+          menu.style.height = "36px";
+          getId(
+            "nav_offers_button"
+          ).innerHTML = `<a href="/offers.html"><i class="bi bi-tag-fill" style="color: #DA251D;"></i>OFFERS</a>`;
+          topminiBar.innerHTML = `<img src="https://i.ibb.co/98XxQs0/logo-heading.png" alt="">
+          <p><i class="bi bi-telephone"></i> 1860 123 1000</p>
+          <p><i class="bi bi-geo-alt"></i> Address <span id="nav_address_sign">▽</span></p>
+          <p id="login_button_nav"><i class="bi bi-person"></i> Login/Sign Up </p>`;
+        }
+      }
+    };
+  }
+}

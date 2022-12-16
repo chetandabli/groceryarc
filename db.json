@@ -2127,6 +2127,34 @@
       "quant": 1,
       "category": "fruitsVeg",
       "id": 12
+    },
+    {
+      "off": "Get 25% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg",
+      "proName": "Fresho",
+      "detail": "Cauliflower",
+      "rate": 4.5,
+      "select": "<option>1 pc - Rs. 13 </option>",
+      "price": 13,
+      "strike": "Rs.17",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 13
+    },
+    {
+      "off": "Get 20% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg",
+      "proName": "Fresho",
+      "detail": "Onion",
+      "rate": 4.1,
+      "select": "<option>5 kg - Rs.131</option>",
+      "price": 131,
+      "strike": "Rs.165",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 14
     }
   ],
   "user": []

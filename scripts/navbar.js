@@ -3,7 +3,17 @@ import { getId, creEle } from "./shortcuts.js";
 ///////////////////// navbar ///////////////////////
 ////////////////////////////////////////////////////
 import {navbar, mNavbar} from "../components/navbar.js";
-document.getElementById("master_navbar").innerHTML = navbar();
+getId("master_navbar").innerHTML = navbar();
+
+getId("nav_logo_img").addEventListener("click", ()=>{
+  location.href = "./index.html"
+})
+getId("nav_cart").addEventListener("click", ()=>{
+  location.href = "./cart.html"
+})
+getId("login_button_nav").addEventListener("click", ()=>{
+  location.href = "./signin.html"
+})
 
 //scroll functionality
 let navBaronScroll = getId("master_navbar");
@@ -615,7 +625,7 @@ const menusShow = () => {
   getId("lastMenus").innerHTML = null;
   categories.forEach((el) => {
     let p = creEle("a");
-    p.href = "./product_pages/product.html";
+    p.href = "./product.html";
     p.innerText = Object.keys(el)[0];
     console.log(el[`${Object.keys(el)}`]);
     p.onmouseover = () => {
@@ -628,7 +638,7 @@ const menusShow = () => {
   });
   getId(
     "lastMenus"
-  ).innerHTML = `<p>Popular Searches</p></p><a href="#">Banana, Sapota &amp; Papaya</a><a href="#">Kiwi, Melon, Citrus Fruit</a><a href="#">Apples &amp; Pomegranate</a><a href="#">Seasonal Fruits</a><a href="#">Mangoes</a><a href="#">Fruit Baskets</a>`;
+  ).innerHTML = `<p>Popular Searches</p></p><a href="./product.html">Banana, Sapota &amp; Papaya</a><a href="./product.html">Kiwi, Melon, Citrus Fruit</a><a href="./product.html">Apples &amp; Pomegranate</a><a href="./product.html">Seasonal Fruits</a><a href="./product.html">Mangoes</a><a href="./product.html">Fruit Baskets</a>`;
 };
 
 function secondMenus(data) {
@@ -636,7 +646,7 @@ function secondMenus(data) {
   let arrayThirdMenu = [];
   data.forEach((item) => {
     let p = creEle("a");
-    p.href = "./product_pages/product.html";
+    p.href = "./product.html";
     p.innerText = Object.keys(item)[0];
 
     p.onmouseover = () => {
@@ -653,7 +663,7 @@ function thirdMenus(data) {
   getId("thirdMenus").innerHTML = null;
   data.forEach((el) => {
     let p = creEle("a");
-    p.href = "./product_pages/product.html";
+    p.href = "./product.html";
     p.innerText = el;
 
     getId("thirdMenus").append(p);
@@ -716,7 +726,7 @@ let debouncing = () => {
   if (id) {
     clearTimeout(id);
   }
-  id = setTimeout(async () => {
+  id = setTimeout(async (event) => {
     let q = document.getElementById("search").value;
     let results = [];
     let res = await Promise.all(
@@ -775,16 +785,19 @@ function append(data) {
     btn.classList = "search_res_button"
     btn.innerText = "ADD 🛒";
     btn.onclick = async () => {
-      let res = await fetch(`${main_url}/cart`, {
-        method: "POST",
-        body: JSON.stringify(el),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      let daat = await res.json();
-      console.log(daat);
+      try{
+        let res = await fetch(`${url}cart`, {
+          method: "POST",
+          body: JSON.stringify(el),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        return console.log("done")
+      }
+      catch(err){
+        console.log(err)
+      }
     };
 
      div2.append(pricediv, btn);
@@ -798,7 +811,7 @@ function append(data) {
   });
   let buttomMassage = creEle("p");
   buttomMassage.classList = "buttomMassage"
-  buttomMassage.innerText = `VIEW ALL PRODUCTS(${i+1})`;
+  buttomMassage.innerText = `VIEW ALL PRODUCTS(${i})`;
   getId("search_results").append(buttomMassage)
 }
 

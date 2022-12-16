@@ -1,9 +1,4 @@
-import { getId, creEle } from "./shortcuts.js";
 
-///////////////////// navbar ///////////////////////
-////////////////////////////////////////////////////
-import navbar from "../components/navbar.js";
-document.getElementById("master_navbar").innerHTML = navbar();
 
 
 
@@ -47,7 +42,7 @@ data.forEach((el,id)=>{
 
     let price =document.createElement("p");
     price.setAttribute("class","price");
-    price.innerHTML=`<span id="mrp">MRP:</span><span id="strike"><del style="color:red">${el.strike}</del>&nbsp;&nbsp;</span><span id="price">RS.${el.price}</span>`;
+    price.innerHTML=`<span id="mrp"><del style="color:red">${el.strike}</del></span>&nbsp;&nbsp;<spam id="bol"><span id="mrp">&#8377</span>${el.price}</spam>`;
 
 
     let div4=document.createElement("div");
@@ -70,10 +65,10 @@ data.forEach((el,id)=>{
 })
 
 
-
+//delete
 
 let removeproduct= async(id)=>{
-    let res=await fetch(`${url}/${id}`,{
+    let res=await fetch(`${main_url}/${id}`,{
         method:"DELETE",
         
     });
@@ -82,3 +77,4 @@ let removeproduct= async(id)=>{
 }
 
 }
+

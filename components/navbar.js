@@ -2,7 +2,7 @@ const navbar = ()=>{
     return `<div id="navbar">
     <div id="nav_main">
         <div id="nav_logo">
-            <img src="https://i.ibb.co/Kqh1BZB/GA-2.png" alt="logo">
+            <img id="nav_logo_img" src="https://i.ibb.co/Kqh1BZB/GA-2.png" alt="logo">
             <div id="scroll_time_menu_button"></div>
         </div>
         <div id="nav_remain">
@@ -22,8 +22,7 @@ const navbar = ()=>{
                 </div>
                 <div id="cart_div_master">
                     <div id="nav_cart">
-                        <div id="nav_basket">
-                        <a href="./cart.html"><i class="bi bi-basket2-fill"></i></a></div>
+                        <div id="nav_basket"><i class="bi bi-basket2-fill"></i></div>
                         <div>
                             <p>My Basket</p>
                             <p id="nav_cart_item_count">0 items</p>

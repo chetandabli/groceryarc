@@ -1,118 +1,42 @@
-class User{
 
-    constructor(){
-        
 
+///////////// footer ///////////////////////
+/////////////////////////////////////////////
+import { footer } from "../components/footer.js";
+let footer_new = document.getElementById("footer");
+footer_new.innerHTML = footer();
+
+
+
+// Take out the form-input button using DOM.
+const Register_btn = document.querySelector("#register form");
+Register_btn.addEventListener("submit",RegisterFunction);
+
+// Make API request to server for registering the new user.
+async function RegisterFunction(event) {
+  try {
+    event.preventDefault();
+    let all_input_tags = document.querySelectorAll("#register input");
+    let userObj = {};
+    for (let i = 0; i < all_input_tags.length - 1; i++) {
+      userObj[all_input_tags[i].id] = all_input_tags[i].value;
     }
-
-    validateUser(username){
-
-        return username.includes("@") ? false : true;
-    }
-    validatePassword(password){
-
-        return password.length<8 ? false : true;
-    }
-
-    async signUP(n,e,u,p,m,d){
-        let isValided =this.validatePassword(p) && this.validateUser(u);
-        if(isValided){
-            this.name=n;
-            this.email=e;
-            this.username=u;
-            this.password=p;
-            this.mobile=m;
-            this.description=d
-            
-
-            const register_api='https://masai-api-mocker.herokuapp.com/auth/register'
-            let data1=JSON.stringify(this)
-            const response = await fetch(register_api,{
-
-                method:"POST",
-                body:data1,
-
-                headers:{
-                    "Content-Type":"application/json",
-                },
-
-            });
-            const data=await response.json();
-            console.log(data)
-            
-        }
-    }
-    
-    async login(u,p){
-
-        const login_data ={
-            username: u,
-            password: p,
-
-        };
-        let data2=JSON.stringify(login_data)
-        const login_api= 'https://masai-api-mocker.herokuapp.com/auth/login'
-
-        const response = await fetch(login_api, {
-
-            method: "POST",
-            body: data2,
-
-            headers: {
-                "Content-Type":"application/json",
-            },
-        });
-
-        const data= await response.json();
-        
-        return data
-    }
-}
-let user= new User();
-let registerNew=document.getElementById("register")
-registerNew.onclick = () => {
-
-    
-
-    let name=document.getElementById("name").value;
-    let email=document.getElementById("email").value;
-    let username=document.getElementById("username").value;
-    let password=document.getElementById("password").value;
-    let mobile=document.getElementById("mobile").value;
-    let description=document.getElementById("description").value;
-    
-
-    user.signUP(name,email,username,password,mobile,description)
-    console.log(user)
-    document.getElementById("succes_statement").textContent=`Hello ${name},Your Acoount is succesfully Created`
-    // window.location.href="signin.html"
-
-}
-
-// let loginUser=document.getElementById("login")
-// loginUser.onclick = async() => {
-
-//     const username= document.getElementById("login-username").value;
-//     const password= document.getElementById("login-password").value;
-
-//     let {token} = await user.login(username,password);
-    
-//     getprofile(username,token)
-// }
-
-const getprofile = async (username,token) => {
-
-    let api_link = `https://masai-api-mocker.herokuapp.com/user/${username}`
-
-    let response= await fetch(api_link,{
-        headers : {
-            Authorization: `Bearer ${token}`,
-            'Content-Type' : 'application/json',
-        },
+    let register_request = await fetch("http://localhost:3000/user", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userObj)
     });
-
-    let data = await response.json();
-    alert(`welcome ${data.username}`)
+    if(register_request.ok){
+        alert("Hurry, User has been created !!");
+         window.location.assign("signin.html")
+    }else{
+        alert("Bad request has been made.");
+    }
+  } catch (error) {
+    alert("Something went wrong. Please try again later.");
+  }
 }
 
 

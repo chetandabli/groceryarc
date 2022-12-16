@@ -1,0 +1,150 @@
+*{
+    font-family: "Brandon Text", Arial, sans-serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#new{
+    display: flex;
+    justify-content: right;
+}
+#new>p{
+    padding-top: 10px;
+    margin-right: 10px;
+}
+#succes_statement{
+    font-size: 20px;
+    color: red;
+}
+.button1{
+    width: 10%;
+    height: 40px;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+#login {
+    width:25%;
+    margin: auto;
+    font-family: "Brandon Text", Arial, sans-serif;
+    
+}
+#login>h2{
+    color: #fe3b1f;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+#login p{
+    font-size: 14px;
+    font-family: "Brandon Text", Arial, sans-serif;
+    margin-top: 20px;
+}
+#first-part{
+    line-height: 12px;
+    font-family: "Brandon Text", Arial, sans-serif;
+}
+#second-part{
+    line-height: 30px;
+    font-family: "Brandon Text", Arial, sans-serif;
+}
+#second-part>p{
+    line-height: 18px;
+}
+#first-part>h2{
+    color: #fe3b1f;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+#tick-box{
+    background-color: #f4f4f4;
+    padding: 5px 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Brandon Text", Arial, sans-serif;
+}
+#tick-box>p{
+    line-height: 18px;
+    padding-left: 20px;
+    font-family: "Brandon Text", Arial, sans-serif;
+}
+.input{
+    width: 98%;
+    height: 35px;
+    font-family: "Brandon Text", Arial, sans-serif;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+#registerbtn{
+    width: 98%;
+    height: 35px;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 80pxpx;
+    margin-bottom: 10px;
+}
+#registerbtn:hover{
+    background-color: #757575;
+}
+#tap{
+    margin-top: 50px;
+    font-family: "Brandon Text", Arial, sans-serif;
+}
+#tap:hover{
+    background-color: #757575;
+}
+#extra{
+    color: #fe3b1f;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+
+/* admin signin and sign up css start here */
+
+#two{
+    color:white;
+    background-color: black;
+    width:100%;
+    margin: auto;
+    height:50px;
+    padding:5px;
+}
+#two>p{
+    text-align: center;
+}
+#admin-head{
+    background-color: rgb(213, 251, 213);
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+}
+#admin-head>div>img{
+    width:40%;
+}
+#admin-head>div>p{
+    font-size: 35px;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+#ap{
+    width:30%;
+    padding:5px;
+ 
+    border-radius: 5px;
+ 
+    
+}
+#ap:hover{
+
+    background-color: rgb(185, 254, 185);
+    text-decoration: underline;
+}

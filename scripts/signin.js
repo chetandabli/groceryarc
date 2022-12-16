@@ -1,124 +1,29 @@
-class User{
 
-    constructor(){
-       
 
-    }
+const Login_btn = document.querySelector("#login form");
+Login_btn.addEventListener("submit",LoginFunction);
 
-    validateUser(username){
-
-        return username.includes("@") ? false : true;
-    }
-    validatePassword(password){
-
-        return password.length<8 ? false : true;
-    }
-
-    async signUP(n,e,u,p,m){
-        let isValided =this.validatePassword(p) && this.validateUser(u);
-        if(isValided){
-            this.name=n;
-            this.email=e;
-            this.username=u;
-            this.password=p;
-            this.mobile=m;
-            
-
-            const register_api='https://masai-api-mocker.herokuapp.com/auth/register'
-            let data1=JSON.stringify(this)
-            const response = await fetch(register_api,{
-
-                method:"POST",
-                body:data1,
-
-                headers:{
-                    "Content-Type":"application/json",
-                },
-
-            });
-            const data=await response.json();
-            
+async function LoginFunction(event){
+    try {
+        event.preventDefault();
+        let all_login_input = document.querySelectorAll("#login input");
+        //let obj = {};
+        for(let i=0;i<all_login_input.length-1;i++){
+            obj[all_login_input[i].id] = all_login_input[i].value;
         }
-    }
-    
-    async login(u,p){
-
-        const login_data ={
-            username: u,
-            password: p,
-
-        };
-        let data2=JSON.stringify(login_data)
-        const login_api= 'https://masai-api-mocker.herokuapp.com/auth/login'
-
-        const response = await fetch(login_api, {
-
-            method: "POST",
-            body: data2,
-
-            headers: {
-                "Content-Type":"application/json",
-            },
-        });
-
-        const data= await response.json();
-        
-        return data
-    }
-}
-
-let user=new User();
-// let registerNew=document.getElementById("register")
-// registerNew.onclick = () => {
-
-    
-
-//     let name=document.getElementById("name").value;
-//     let email=document.getElementById("email").value;
-//     let username=document.getElementById("username").value;
-//     let password=document.getElementById("password").value;
-//     let mobile=document.getElementById("mobile").value;
-    
-
-//     user.signUP(name,email,username,password,mobile)
-//     console.log(user)
-
-// }
-
-let log=document.getElementById("login")
-log.onclick = async() => {
-
-    try{
-        const username= document.getElementById("login-username").value;
-    const password= document.getElementById("login-password").value;
-
-    let {token} = await user.login(username,password);
-    
-    getprofile(username,token)
-    }
-    catch(e){
-        console.log(e)
-    }
-}
-
-const getprofile = async (username,token) => {
-
-    try{
-        let api_link = `https://masai-api-mocker.herokuapp.com/user/${username}`
-
-    let response= await fetch(api_link,{
-        headers : {
-            Authorization: `Bearer ${token}`,
-            'Content-Type' : 'application/json',
-        },
-    });
-
-    let data = await response.json();
-    alert(`welcome ${data.username}`)
-    window.location.href="./landing.html"
-    }
-    catch(e){
-        console.log(e)
-        alert(`wrong username`)
+        console.log(obj);
+        let login_request = await fetch("http://localhost:3000/user",{
+            
+        })
+        if(login_request.ok){
+            
+            alert("User has been successfully Logged In.");
+            window.location.href = "index.html";
+        }else{
+            alert("User not found.");
+        }
+    } catch (error) {
+		console.log(error);
+        alert("wrong username or password. Please try again later.");
     }
 }

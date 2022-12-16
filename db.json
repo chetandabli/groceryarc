@@ -468,11 +468,7 @@
       "quant": 1,
       "category": "fruitsVeg"
     }
-  
   ],
-  
-
-  
   "grainsMasala": [
     {
       "off": "Get 8% off ✹",
@@ -2091,6 +2087,58 @@
       "id": 3
     }
   ],
-  "user": []
-
+  "user": [
+    {
+      "name": "Souvik Ghosh",
+      "email": "sg39279@gmail.com",
+      "username": "helloSouvik",
+      "password": "helloSouvik",
+      "mobile": "5646",
+      "description": "helloSouvik",
+      "id": 1
+    },
+    {
+      "name": "Souvik",
+      "email": "jh@ggdg",
+      "username": "souvik",
+      "password": "souvik123",
+      "mobile": "6636363",
+      "description": "fddd",
+      "id": 2
+    },
+    {
+      "name": "xcb xbx",
+      "email": "jh@ggdg",
+      "username": "ghh",
+      "password": "ghh",
+      "mobile": "6636363",
+      "description": "689",
+      "": "on",
+      "id": 3
+    },
+    {
+      "name": "wrtwry",
+      "email": "hii@gmail.com",
+      "username": "gfhh",
+      "password": "gfhsf",
+      "mobile": "76554",
+      "description": "gsfhsh",
+      "": "on",
+      "id": 4
+    },
+    {
+      "off": "5",
+      "image_url": "",
+      "proName": "hhh",
+      "detail": "hh",
+      "rate": "555",
+      "select": "<option>3 kg Pack - Rs. 420</option>",
+      "price": "55",
+      "strike": "44",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": "1",
+      "category": "bakeryCake",
+      "id": 5
+    }
+  ]
 }

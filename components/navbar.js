@@ -2,7 +2,7 @@ const navbar = ()=>{
     return `<div id="navbar">
     <div id="nav_main">
         <div id="nav_logo">
-            <img src="https://i.ibb.co/Kqh1BZB/GA-2.png" alt="logo">
+            <img id="nav_logo_img" src="https://i.ibb.co/Kqh1BZB/GA-2.png" alt="logo">
             <div id="scroll_time_menu_button"></div>
         </div>
         <div id="nav_remain">
@@ -51,4 +51,36 @@ const navbar = ()=>{
 </div>`
 }
 
-export default navbar
+const mNavbar = ()=>{
+    return `<div id="top_menu_mobile">
+    <div id="top_menu_mobile_first">
+      <div id="mobile_menu_lines">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div id="mobile_menu"></div>
+    </div>
+    <div id="top_menu_mobile_second">
+      <i class="bi bi-person"></i>
+    </div>
+    <div id="top_menu_mobile_third">
+      <img src="https://i.ibb.co/Kqh1BZB/GA-2.png" alt="logo">
+    </div>
+    <div id="top_menu_mobile_fourth">
+      <i class="bi bi-geo-alt"></i>
+    </div>
+    <div id="top_menu_mobile_fifth">
+      <i class="bi bi-cart"></i>
+    </div>
+  </div>
+  <div id="top_search_mobile">
+    <div class="mobile_support">
+      <input class="search" type="text" name="search" id="search" placeholder="Search for Products">
+      <button class="search_button" id="search_button"><i class="bi bi-search" style="color: #fff"></i></button>
+  </div>
+    <div id="search_results"></div>
+  </div>`
+}
+
+export {navbar, mNavbar}

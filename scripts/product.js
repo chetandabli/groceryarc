@@ -41,7 +41,7 @@ data.forEach((el)=>{
 
     let rating =document.createElement("p");
     rating.setAttribute("class","rating");
-    rating.innerText=el.rate;
+    rating.innerText="Rating: "+el.rate;
 
     let select =document.createElement("select");
     select.setAttribute("class","select");
@@ -52,7 +52,7 @@ data.forEach((el)=>{
 
     let price =document.createElement("p");
     price.setAttribute("class","price");
-    price.innerHTML=`<span id="mrp">MRP:</span><span id="strike">${el.strike}</span><span id="price">RS.${el.price}</span>`;
+    price.innerHTML=`<span class="mrp">MRP:</span><span class="strike">${el.strike} </span><span class="o_price">RS ${el.price}</span>`;
 
     let delivery =document.createElement("p");
     delivery.setAttribute("class","delivery");
@@ -64,7 +64,7 @@ data.forEach((el)=>{
     
     let add=document.createElement("button");
     add.setAttribute("class","add");
-    add.innerText="Add";
+    add.innerText="ADD";
     
     add.onclick= async()=>{
 

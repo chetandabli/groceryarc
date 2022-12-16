@@ -21,11 +21,6 @@ body{
     width: 1200px;
     margin: auto;
 }
-@media all and (min-width: 1000px) and (max-width: 1210px) {
-	#navbar{
-    width: 990px;
-}
-}
 
 #nav_main{
     display: flex;
@@ -38,10 +33,11 @@ body{
     justify-content: space-evenly;
     align-items: center;
 }
-#nav_logo>img{
+#nav_logo_img{
     height: 90%;
     padding: 0;
     margin: 0;
+    cursor: pointer;
 }
 #scroll_time_menu_button{
     cursor: pointer;
@@ -79,19 +75,23 @@ body{
 }
 
 #nav_search_div{
-    width: 550px;
+    width: 65%;
     position: relative;
+    display: flex;
+    
 }
 
 #anotherdiv_for_searchcart{
+    width: 100%;
     height: 32px;
     border: .5px solid gray;
     margin: 10px 0 20px 0;
     display: flex;
+    justify-content: space-between;
 }
 
 #search{
-    width: 480px;
+    width: 80%;
     height: 30px;
     padding: 0 14px;
     outline: none;
@@ -113,7 +113,7 @@ body{
 #search_results{
     position: absolute;
     top: 44px;
-    width: 550px;
+    width: 100%;
     height: auto;
     max-height: 600px;
     background-color: #fdf1f1;
@@ -135,7 +135,7 @@ body{
     border: .1px solid gray;
     border-top: none;
     height: auto;
-    padding: 10px 0;
+    padding: 7px 0;
     margin: 0;
     color: #000000;
     text-align: center;
@@ -148,13 +148,15 @@ body{
 }
 .search_res_box{
     display: flex;
-    height: 50px;
+    height: 45px;
     justify-content: space-between;
     border: .1px solid gray;
     border-top: none;
 }
-.search_res_box:hover{
+.search_res_box>div>button{
     cursor: pointer;
+}
+.search_res_box:hover{
     background-color: #fff;
 }
 .search_res_box>div>img{
@@ -213,7 +215,7 @@ body{
 }
 #nav_basket{
     font-size: 40px;
-    color: #DA251D;
+    color: #86df00;
 }
 
 #nav_cart>:last-child{
@@ -380,4 +382,101 @@ body{
     border: none;
     line-height: 23px;
     color: #222222;
+}
+@media all and (min-width: 927px) and (max-width: 1210px) {
+	#navbar{
+    width: 98%;
+}
+}
+/* for tablets screens */
+@media all and (min-width: 751px) and (max-width: 926px) {
+	#navbar{
+    width: 100%;
+}
+#nav_topmost_section>img{
+    width: 0;
+}
+#nav_search_div{
+    width: 380px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+#search{
+    width: 345px;
+    height: 30px;
+    padding: 0 14px;
+    outline: none;
+    border: none;
+}
+#search_button{
+    width: 40px;
+    height: 32px;
+    background-color: #84c225;
+    border: 4px solid #84c225;
+    transition: all 0.5s ease-out;
+}
+}
+
+/* for Mobile screens applied using JS*/
+#top_menu_mobile{
+    display: flex;
+    height: 40px;
+    background-color: #7ED957;
+    justify-content: space-evenly;
+}
+#mobile_menu_lines{
+    display: block;
+    padding: 8px 0;
+    cursor: pointer;
+}
+#mobile_menu_lines>div{
+    align-items: center;
+    width: 1.7rem;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 5px;
+}
+#top_menu_mobile_third>img{
+    height: 38px;
+    cursor: pointer;
+}
+
+#top_menu_mobile_second, #top_menu_mobile_fourth, #top_menu_mobile_fifth{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#top_search_mobile{
+    height: 35px;
+    background-color: #7ED957;
+    margin: auto;
+}
+.mobile_support{
+    width: 90%;
+    margin: auto;
+}
+
+#top_search_mobile>div>input{
+    width: 85%;
+    height: 30px;
+    padding: 1px 14px 0 14px;
+    outline: none;
+    border: none;
+    margin: 0;
+}
+#top_search_mobile>div>button{
+    width: 5%;
+    height: 30px;
+    outline: none;
+    border: none;
+    margin: 0;
+}
+#top_search_mobile>div>button>i{
+    width: 90%;
+}
+.mobile_support{
+    z-index: 5;
 }

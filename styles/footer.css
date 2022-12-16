@@ -138,3 +138,79 @@ a{
 #pop>div>a:hover{
     text-decoration: underline;
 }
+/* Small screen display */
+@media all and (min-width:330px) and (max-width:450px){
+    #discription{
+        width:95%;
+        padding: 0px 0px 20px 10px;
+        margin:auto;
+        margin-bottom: 10px;
+    }
+    #footr{
+        width:95%;
+        margin:auto;
+        padding: 0px 0px 10px 10px;
+    }
+    #popular{
+        width:95%;
+        margin:auto;
+    }
+    #one{
+        width:95%;
+        margin:auto;
+    }
+   
+    #two{
+        width:95%;
+        margin:auto;
+        
+    }
+    #two>p{
+        width:100%;
+        margin-left: 10px;
+        text-align: center;
+    }
+    #dot{
+        color:white;
+        margin:auto;
+        width:95%;
+    }
+}
+/* Medium screen display */
+@media all and (min-width:451px) and (max-width:750px){
+    #discription{
+        width:95%;
+        padding: 0px 0px 20px 10px;
+        margin:auto;
+        margin-bottom: 10px;
+    }
+    #footr{
+        width:95%;
+        margin:auto;
+        padding: 0px 0px 10px 10px;
+    }
+    #popular{
+        width:95%;
+        margin:auto;
+    }
+    #one{
+        width:95%;
+        margin:auto;
+    }
+   
+    #two{
+        width:95%;
+        margin:auto;
+        
+    }
+    #two>p{
+        width:100%;
+        margin-left: 10px;
+        text-align: center;
+    }
+    #dot{
+        color:white;
+        margin:auto;
+        width:95%;
+    }
+}

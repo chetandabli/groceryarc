@@ -2155,6 +2155,20 @@
       "quant": 1,
       "category": "fruitsVeg",
       "id": 14
+    },
+    {
+      "off": "Get 20% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000284_11-fresho-green-peas.jpg",
+      "proName": "Fresho",
+      "detail": "Green Peas",
+      "rate": 4.4,
+      "select": "<option>1 kg Pack - Rs. 99</option>",
+      "price": 99,
+      "strike": "Rs.123",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 15
     }
   ],
   "user": []

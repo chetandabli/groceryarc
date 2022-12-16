@@ -177,3 +177,9 @@
 }
 
 
+#cat{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+   border-bottom: 1px solid grey;
+}

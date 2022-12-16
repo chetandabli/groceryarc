@@ -130,3 +130,50 @@
 .delivery{
     font-size: 10px;
 }
+
+/* small screen */
+@media all and (min-width:330px) and (max-width:450px){
+    #container{
+      
+        grid-template-columns: repeat(2,1fr);
+     
+    }
+
+    #lhs{
+        display: none;
+    }
+
+    #rhs{
+        flex: 10;
+        margin: auto;
+        width: 90%;
+    }
+    #product{
+        width: 90%;
+    }
+}
+
+
+/* medium screen */
+@media all and (min-width:451px) and (max-width:750px){
+    #container{
+       
+        grid-template-columns: repeat(3,1fr);
+     
+    }
+    #lhs{
+        display: none;
+    }
+
+    #rhs{
+        flex: 10;
+        margin: auto;
+        width: 100%;
+    }
+
+    #product{
+        width: 90%;
+    }
+}
+
+

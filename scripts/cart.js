@@ -32,9 +32,9 @@ get_data();
 const append_data=(data)=>{
 let cont = document.getElementById("cart");
 cont.innerHTML=null;
-data.forEach((el)=>{
+data.forEach((el,id)=>{
     let div =document.createElement("div");
-    div.setAttribute("class","product_div");
+    div.setAttribute("class","pro_div");
     
     let image = document.createElement("img");
     image.setAttribute("class","p_image");
@@ -47,36 +47,38 @@ data.forEach((el)=>{
 
     let price =document.createElement("p");
     price.setAttribute("class","price");
-    price.innerHTML=`<span id="mrp">MRP:</span><span id="strike">${el.strike}</span><span id="price">RS.${el.price}</span>`;
+    price.innerHTML=`<span id="mrp">MRP:</span><span id="strike"><del style="color:red">${el.strike}</del>&nbsp;&nbsp;</span><span id="price">RS.${el.price}</span>`;
 
 
     let div4=document.createElement("div");
     div4.setAttribute("class","div4");
-    div4.innerHTML=`<div class="qty">Qty</div><input class="quant" type="text" value="${el.quant}">`
+    div4.innerHTML=`<button id="minus">-</button>&nbsp;&nbsp;${el.quant}&nbsp;&nbsp;<button id="plus">+</button>`
     
-    let add=document.createElement("button");
-    add.setAttribute("class","remove");
-    add.innerText="Remove";
-    
-    add.onclick= async(id)=>{
-
-        let res =await fetch(`${main_url}/${id}`,{
-            method :"DELETE",
-           
-        })
-
-        let daat = await res.json();
-        console.log(daat)
+    let remo=document.createElement("button");
+    remo.setAttribute("class","remove");
+    remo.innerText="Remove";
+    remo.onclick=()=>{
+        removeproduct(id);
     }
     // <button class="add">Add</button>`
-     
-    div4.append(add)
+    
+  
 
     //div2.append(price,div4)
-    div.append(image,details, price,add);
+    div.append(image,details, price,div4,remo);
     cont.append(div);
 })
 
 
+
+
+let removeproduct= async(id)=>{
+    let res=await fetch(`${url}/${id}`,{
+        method:"DELETE",
+        
+    });
+ 
+    get_data();
+}
 
 }

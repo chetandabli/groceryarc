@@ -32,4 +32,41 @@
 #cart{
     width:73%;
     margin:auto;
+    text-align: center;
+    
+   
+}
+.pro_div{
+    align-items: center;
+    width:85%;
+    margin:auto;
+    padding:10px;
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-bottom: 10px;
+    border:1px solid grey;
+    border-radius: 10px;
+    height:140px;
+    
+}
+.remove{
+    height:30px;
+
+}
+#minus{
+    border-radius: 3px;
+   
+}
+#minus:hover{
+    background-color: black;
+    color:white;
+}
+#plus{
+    border-radius:3px;
+ 
+
+}
+#plus:hover{
+    background-color: black;
+    color:white;
 }

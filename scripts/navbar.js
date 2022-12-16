@@ -757,6 +757,23 @@ const mediaQueryList = window.matchMedia("(max-width: 750px)");
 if (mediaQueryList.matches) {
   flag = false;
   document.getElementById("master_navbar").innerHTML = mNavbar();
+  document.getElementById("search").addEventListener("input", ()=>{
+    getId("search_results").style.zIndex = "-1"
+    debouncing()
+  });
+  getId("mobile_menu_lines").addEventListener("click", () => {
+    //menu fucntion
+  });
+  getId("top_menu_mobile_second").addEventListener("click", () => {
+    location.href = "./signin.html";
+  });
+  getId("top_menu_mobile_third").addEventListener("click", () => {
+    location.href = "./index.html";
+  });
+  getId("top_menu_mobile_fifth").addEventListener("click", () => {
+    location.href = "./cart.html";
+  });
+
 } else {
   flag = true;
   document.getElementById("master_navbar").innerHTML = navbar();
@@ -848,6 +865,22 @@ function WidthChange(mq) {
   if (mq.matches) {
     flag = false;
     document.getElementById("master_navbar").innerHTML = mNavbar();
+    document.getElementById("search").addEventListener("input", ()=>{
+      getId("search_results").style.zIndex = "-1"
+      debouncing()
+    });
+  getId("mobile_menu_lines").addEventListener("click", () => {
+    //menu fucntion
+  });
+  getId("top_menu_mobile_second").addEventListener("click", () => {
+    location.href = "./signin.html";
+  });
+  getId("top_menu_mobile_third").addEventListener("click", () => {
+    location.href = "./index.html";
+  });
+  getId("top_menu_mobile_fifth").addEventListener("click", () => {
+    location.href = "./cart.html";
+  });
     // window width is at least 500px
   } else {
     flag = true;

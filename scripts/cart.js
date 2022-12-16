@@ -2,10 +2,10 @@
 
 
 
-
 import { footer } from "../components/footer.js";
 let footer_new = document.getElementById("footer");
 footer_new.innerHTML = footer();
+
 
 
 
@@ -22,11 +22,11 @@ let get_data=async()=>{
     append_data(data)
 }
 
-get_data();
 
 
 
 const append_data=(data)=>{
+    let total_amount=0;
     if(data.length==0){
         document.getElementById("cart").innerHTML=` <div id="init">
         <div >
@@ -37,9 +37,14 @@ const append_data=(data)=>{
     </div>`
 
     }else{
+        
+
         let cont = document.getElementById("cart");
 cont.innerHTML=null;
 data.forEach((el)=>{
+
+    total_amount+=el.price;
+
     let div =document.createElement("div");
     div.setAttribute("class","pro_div");
     
@@ -67,26 +72,38 @@ data.forEach((el)=>{
     remo.onclick=()=>{
         removeproduct(el.id);
     }
+    
+   
 
     div.append(image,details, price,div4,remo);
     cont.append(div);
 })
+console.log(total_amount)
+document.getElementById("cart_total").innerText=`Subtotal: ₹${total_amount}`;
+
+document.getElementById("total_items").innerText=`Items: ${data.length}`;
+localStorage.setItem("order_value", total_amount);
 
 
 
 
-//delete
 
-let removeproduct= async(id)=>{
-    let res=await fetch(`${url}/${id}`,{
-        method:"DELETE",
-        
-    });
- 
-    get_data(data);
-}
+
+
 
 }
+}
+
+get_data();
+
+
+  
+
+      let removeproduct= async(id)=>{
+        let res=await fetch(`${url}/${id}`,{
+            method:"DELETE",
+            
+        });
+     
+        get_data(data);
     }
-
-

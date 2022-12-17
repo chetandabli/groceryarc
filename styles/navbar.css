@@ -418,7 +418,12 @@ body{
     transition: all 0.5s ease-out;
 }
 }
-
+@media all and (min-width: 0px) and (max-width: 750px){
+    body{
+        padding-top: 75px;
+        transition: all 0.5s ease-out;
+    }
+}
 /* for Mobile screens applied using JS*/
 #top_menu_mobile{
     display: flex;

@@ -480,3 +480,23 @@ body{
 .mobile_support{
     z-index: 5;
 }
+.bi-cart{
+    position: relative;
+}
+#top_menu_mobile_fifth{
+    position: relative;
+}
+#cart_count_mobile_div{
+    position: absolute;
+    right: -5px;
+    top: 2px;
+    height: 17px;
+    width: 17px;
+    background-color: rgb(221, 46, 46);
+    border-radius: 50%;
+}
+#cart_count_mobile_tag{
+    padding: 2px 5px;
+    margin: 0;
+    font-size: 12px;
+}

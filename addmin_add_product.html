@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Groceryarc || Online Grocery Shopping and Online Supermarket in India</title>
+    <link rel="shortcut icon" href="https://i.ibb.co/yhDC2xr/GA.png" type="image/x-icon">
 </head>
 <link rel="stylesheet" href="./styles/admin_addproduct.css">
 <body>
+    <!-- navbar -->
+
+    <div id="navbar_admin">
+        <div id="admin-head">
+            <div>
+                <img src="https://i.ibb.co/Kqh1BZB/GA-2.png" alt="">
+            </div>
+            <div>
+                <p>Admin Panel</p>
+            </div>
+           
+            <div>
+                <!-- <a href="./addmin_add_product.html"><button id="ap">Add Products</button></a> -->
+                <a href="./index.html"><button id="ap">Groceryarc/Home</button></a>
+                <a href="./admin_login.html"><button id="ap">Log Out</button></a>
+                
+                
+            </div>
+        </div>
+    </div>
+
 
 <!-- add product form start -->
 
@@ -18,13 +40,24 @@
             <input type="text" placeholder="Product Name" id="proName"></br>
             <input type="text" placeholder="Detail" id="detail"></br>
             <input type="text" placeholder="Rate" id="rate"></br>
-            <input type="text" placeholder="Select Option" id="select"></br>
+            <!-- <input type="text" placeholder="Select Option" id="select"></br> -->
             <input type="number" placeholder="Original Price" id="price"></br>
             <input type="number" placeholder="discount " id="of"></br>
             <input type="number" placeholder="Strikeprice"  id="strike"></br>
-            <input type="text" placeholder="Delivery Time" id="common"></br>
-            <input type="text" placeholder="Quantity" id="quant"></br>
-            <input type="text" placeholder="Category" id="category"></br>
+            <!-- <input type="text" placeholder="Delivery Time" id="common"></br> -->
+            <!-- <input type="text" placeholder="Quantity" id="quant"></br> -->
+            <input list="categories" name="browser"  id="category" placeholder="Category">
+  <datalist id="categories">
+    <option value="fruitsVeg">
+    <option value="grainsMasala">
+    <option value="bakeryCake">
+    <option value="beverages">
+    <option value= "cleaningHouse">
+    <option value="kitchenGarden">
+    <option value="eggMeat">
+    <option value="gourmetFood">
+  </datalist>
+        
             <input type="text" placeholder="Image Url" id="image_url"></br>
             <button id="add_product">Add Product</button>
         
@@ -46,6 +79,16 @@
     </div>
 
     <!-- add product form end -->
+
+    <!-- footer -->
+
+    <div id="footer_admin">
+        <div id="two">
+            <p>Copyright © 2021-2023 Supermarket Grocery Supplies Pvt Ltd</p>
+        </div>
+    </div>
     
 </body>
 </html>
+
+<script src="./scripts/admin_addproduct.js"></script>

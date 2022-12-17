@@ -27,18 +27,18 @@
     cursor: pointer;
     text-decoration: none;
 }
-#container{
-    width: 25%;
+#login {
+    width:25%;
     margin: auto;
     font-family: "Brandon Text", Arial, sans-serif;
     
 }
-#container>h2{
+#login>h2{
     color: #fe3b1f;
     margin-bottom: 10px;
     margin-top: 20px;
 }
-#container p{
+#login p{
     font-size: 14px;
     font-family: "Brandon Text", Arial, sans-serif;
     margin-top: 20px;
@@ -78,7 +78,7 @@
     margin-top: 6px;
     margin-bottom: 6px;
 }
-.button{
+#registerbtn{
     width: 98%;
     height: 35px;
     color: white;
@@ -87,8 +87,9 @@
     cursor: pointer;
     text-decoration: none;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
-.button:hover{
+#registerbtn:hover{
     background-color: #757575;
 }
 #tap{
@@ -97,4 +98,52 @@
 }
 #tap:hover{
     background-color: #757575;
+}
+#extra{
+    color: #fe3b1f;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+
+/* admin signin and sign up css start here */
+
+#two{
+    color:white;
+    background-color: black;
+    width:100%;
+    margin: auto;
+    height:50px;
+    padding:5px;
+}
+#two>p{
+    text-align: center;
+}
+#admin-head{
+    background-color: rgb(213, 251, 213);
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+}
+#admin-head>div>img{
+    width:40%;
+}
+#admin-head>div>p{
+    font-size: 35px;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+#ap{
+    width:30%;
+    padding:5px;
+ 
+    border-radius: 5px;
+ 
+    
+}
+#ap:hover{
+
+    background-color: rgb(185, 254, 185);
+    text-decoration: underline;
 }

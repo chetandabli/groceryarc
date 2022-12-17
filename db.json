@@ -2099,6 +2099,20 @@
       "quant": 1,
       "category": "fruitsVeg",
       "id": 3
+    },
+    {
+      "off": "Get 25% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/1203441_1-fresho-onion-1-kg-new-potato-1-kg-tomato-hybrid-1-kg.jpg",
+      "proName": "Fresho",
+      "detail": "Onion 1 kg + New Potato 1 kg + Tomato - Hybrid 1 kg",
+      "rate": 4.2,
+      "select": "<option>1 kg Pack - Rs. 68</option>",
+      "price": 68,
+      "strike": "Rs.90",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 4
     }
   ],
   "user": []

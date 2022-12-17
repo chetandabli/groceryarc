@@ -46,7 +46,7 @@ a{
 #two{
     color:white;
     background-color: black;
-    width:100%;
+    /* width:%; */
     margin: auto;
     height:50px;
     padding:5px;
@@ -146,7 +146,7 @@ a{
     }
    
     #two{
-        width:95%;
+        width:100%;
         margin:auto;
         
     }
@@ -199,7 +199,7 @@ a{
     }
    
     #two{
-        width:95%;
+        width:100%;
         margin:auto;
         
     }

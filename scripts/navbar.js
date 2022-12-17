@@ -626,11 +626,171 @@ function thirdMenus(data) {
   });
 }
 
+//cart items pop up
+const cartPop = (data)=>{
+  getId("cart_pop_up").innerHTML = null;
+  console.log("loppppppp")
+  let subtotal = 0;
+
+
+  let granddiv = creEle("div");
+  granddiv.classList = "granddiv"
+  granddiv.setAttribute("id", "granddiv")
+  getId("cart_pop_up").append(granddiv)
+
+  if(data != undefined){
+    data.forEach((el)=>{
+      let w = ""
+      for(let i = 3; i < el.strike.length; i++){
+        w += el.strike[i]
+      }
+      let x = Number(w)-el.price;
+      subtotal += el.price;
+      // sample code for pop cart
+  //     let tempDiv = `<div class="cart_pop_div">
+  //     <img class="cart_pop_img" src="${el.image_url}">
+  //     <div class="cart_pop_brand_name">
+  //         <p>${el.proName}</p>
+  //         <p>${el.detail}</p>
+  //         <p>1 x ${el.price}</p>
+  //     </div>
+  //     <div class="last_div_pop_cart">
+  //         <div class="cart_pop_price_div">
+  //             <div>
+  //                 <p>Rs ${el.price}</p>
+  //                 <p style="text-decoration: line-through;">${el.strike}</p>
+  //             </div>
+  //             <p>Saved Rs${x}</p>
+  //         </div>
+  //         <p class="cart_pop_remove"><i class="bi bi-x-circle"></i></p>
+  //     </div>
+  // </div>`
+
+      let cart_pop_div = creEle("div");
+      cart_pop_div.classList = "cart_pop_div";
+
+      let img = creEle("img");
+      img.classList = "cart_pop_img"
+      img.src = el.image_url;
+
+      let cart_pop_brand_name = creEle("div");
+      cart_pop_brand_name.classList = "cart_pop_brand_name";
+
+      let p1 = creEle("p");
+      p1.innerText = el.proName;
+      let p2 = creEle("p");
+      p2.innerText = el.detail;
+      let p3 = creEle("p");
+      p3.innerText = `1 x ${el.price}`;
+
+      cart_pop_brand_name.append(p1, p2, p3);
+
+      let last_div_pop_cart = creEle("div");
+      last_div_pop_cart.classList = "last_div_pop_cart"
+
+      let cart_pop_price_div = creEle("div");
+      cart_pop_price_div.classList = "cart_pop_price_div";
+
+      let div = creEle("div");
+
+      let s1 = creEle("p");
+      s1.innerText = `Rs ${el.price}`;
+      let s2 = creEle("p");
+      s2.innerText = el.strike;
+      s2.style.textDecorationStyle = "line-through";
+
+      div.append(s1, s2);
+
+      let p = creEle("p");
+      p.innerText = `Saved Rs${x}`
+
+      cart_pop_price_div.append(div, p);
+
+      let btn = creEle("p");
+      btn.classList = "cart_pop_remove";
+      btn.innerHTML = `<i class="bi bi-x-circle"></i>`;
+      btn.onclick = ()=>{
+        removeproduct(el.id);
+      }
+
+      last_div_pop_cart.append(cart_pop_price_div, btn)
+
+      cart_pop_div.append(img, cart_pop_brand_name, last_div_pop_cart);
+
+      getId("granddiv").append(cart_pop_div)
+      // arr.push(tempDiv)
+    })
+  }else{
+    let empty = creEle("p");
+    empty.classList = "empty";
+    empty.innerText = "Your basket is empty. Start shopping now!"
+    getId("cart_pop_up").append(empty)
+  }
+    
+    // getId("cart_pop_up").innerHTML = arr.join(" ");
+
+    let div = creEle("div");
+    div.classList = "pop_checkout_box";
+
+    let div1 = creEle("div");
+    let p = creEle("p");
+    p.innerText = `**Actual Delivery Charges computed at checkout ⁉️`;
+    div1.append(p);
+
+    let div2 = creEle("div");
+    let firstDiv = creEle("div");
+    firstDiv.classList = "sub_total_pop_cart"
+
+    let tempMaster = creEle("div")
+
+    let temp1 = creEle("div");
+    let s1 = creEle("p");
+    s1.innerText = `Sub Total: `;
+    let s2 = creEle("p");
+    s2.innerText = `Rs${subtotal}`;
+    temp1.append(s1, s2)
+
+    let temp2 = creEle("div");
+    let t1 = creEle("p");
+    t1.innerText = `Delivery Charge : `;
+    let t2 = creEle("p");
+    t2.innerText = ` ** 😒`; 
+    temp2.append(t1, t2);
+
+    tempMaster.append(temp1, temp2)
+
+    firstDiv.append(tempMaster);
+
+    let secondDiv = creEle("button");
+    secondDiv.innerText = `View Basket & Checkout`;
+    secondDiv.classList = "cart_pop_button";
+    secondDiv.setAttribute("id", "cart_button_pop");
+    secondDiv.onclick = ()=>{
+      location.href = "./cart.html";
+    }
+
+    div2.append(firstDiv, secondDiv);
+
+    div.append(div1, div2);
+
+    getId("cart_pop_up").append(div)
+
+}
+
+let url = "http://localhost:3000/";
+//deleting product from pop cart
+let removeproduct= async(id)=>{
+  let res=await fetch(`${url}cart/${id}`,{
+      method:"DELETE",
+      
+  });
+}
+
 var isOnDiv = false;
 var isInPopMenu = false;
 
 //debouncing, search functionality
-let url = "http://localhost:3000/";
+
 let paths = [
   "fruitsVeg",
   "grainsMasala",
@@ -863,12 +1023,12 @@ if (mediaQueryList.matches) {
       }
     }
   };
+  var belowData;
   (async()=>{
     try{
       let res=await fetch(`${url}cart`)
-      let data= await res.json();
-      // console.log(data)
-      getId("nav_cart_item_count").innerText = `${data.length} items`
+      belowData = await res.json();
+      getId("nav_cart_item_count").innerText = `${belowData.length} items`
     }
     catch(err){
       getId("nav_cart_item_count").innerText = `0 items`
@@ -876,6 +1036,14 @@ if (mediaQueryList.matches) {
     }
     
   })()
+  
+  getId("nav_cart").addEventListener("mouseover", () => {
+    cartPop(belowData)
+});
+  getId("cart_div_master").addEventListener("mouseleave", () => {
+    getId("cart_pop_up").innerHTML = null;
+  });
+
 }
 // media query event handler
 if (matchMedia) {
@@ -1007,12 +1175,12 @@ function WidthChange(mq) {
         }
       }
     };
+    var belowData;
     (async()=>{
       try{
         let res=await fetch(`${url}cart`)
-        let data= await res.json();
-        // console.log(data)
-        getId("nav_cart_item_count").innerText = `${data.length} items`
+        belowData = await res.json();
+        getId("nav_cart_item_count").innerText = `${belowData.length} items`
       }
       catch(err){
         getId("nav_cart_item_count").innerText = `0 items`
@@ -1020,5 +1188,11 @@ function WidthChange(mq) {
       }
       
     })()
+    getId("nav_cart").addEventListener("mouseover", () => {
+      cartPop(belowData)
+  });
+    getId("cart_pop_up").addEventListener("mouseleave", () => {
+      getId("cart_pop_up").innerHTML = null;
+    });
   }
 }

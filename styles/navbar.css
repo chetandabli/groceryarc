@@ -462,6 +462,9 @@ body{
 .mobile_support{
     width: 90%;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
 }
 
 #top_search_mobile>div>input{
@@ -473,14 +476,17 @@ body{
     margin: 0;
 }
 #top_search_mobile>div>button{
-    width: 5%;
-    height: 30px;
+    width: 30px;
+    height: 31px;
     outline: none;
     border: none;
     margin: 0;
 }
 #top_search_mobile>div>button>i{
     width: 90%;
+}
+.search #search input .mobile_support{
+    width: 80%;
 }
 .mobile_support{
     z-index: 5;

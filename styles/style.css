@@ -115,6 +115,15 @@ h2{
   font-weight: normal;
   transition: .5s ease-out;
 }
+#discription{
+  font-family: sans-serif;
+  width:80%;
+  border:1px solid grey;
+  padding: 0 20px 20px 20px;
+  font-size: 16.5px;
+  margin: 20px auto;
+}
+
 @media only screen and (min-width: 750px) and (max-width: 1000px) {
   #content,
   #fruits,
@@ -163,6 +172,20 @@ h2{
     margin: auto;
     margin-top: 15px;
   }
+  #discription{
+    height: 0;
+    width: 0;
+    font-size: 0px;
+    padding: 0;
+    margin: 0;
+  }
+  #discription>p{
+    height: 0;
+    width: 0;
+    font-size: 0px;
+    padding: 0;
+    margin: 0;
+  }
 }
 @media only screen and (min-width: 0px) and (max-width: 450px) {
   #content,
@@ -190,4 +213,19 @@ h2{
     margin: auto;
     margin-top: 15px;
   }
+  #discription{
+    height: 0;
+    width: 0;
+    font-size: 0px;
+    padding: 0;
+    margin: 0;
+  }
+  #discription>p{
+    height: 0;
+    width: 0;
+    font-size: 0px;
+    padding: 0;
+    margin: 0;
+  }
 }
+

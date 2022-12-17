@@ -648,7 +648,7 @@ let debouncing = () => {
     clearTimeout(id);
   }
   id = setTimeout(async (event) => {
-    let q = document.getElementById("search").value;
+    let q = getId("search").value;
     let results = [];
     let res = await Promise.all(
       paths.map(async (el) => {
@@ -745,8 +745,9 @@ const mediaQueryList = window.matchMedia("(max-width: 750px)");
 
 if (mediaQueryList.matches) {
   flag = false;
-  document.getElementById("master_navbar").innerHTML = mNavbar();
-  document.getElementById("search").addEventListener("input", ()=>{
+  getId("master_navbar").innerHTML = mNavbar();
+  getId("master_navbar").style.backgroundColor = "#7ED957";
+  getId("search").addEventListener("input", ()=>{
     getId("search_results").style.zIndex = "-1"
     debouncing()
   });
@@ -777,7 +778,7 @@ if (mediaQueryList.matches) {
   })()
 } else {
   flag = true;
-  document.getElementById("master_navbar").innerHTML = navbar();
+  getId("master_navbar").innerHTML = navbar();
   getId("nav_logo_img").addEventListener("click", () => {
     location.href = "./index.html";
   });
@@ -787,7 +788,7 @@ if (mediaQueryList.matches) {
   getId("login_button_nav").addEventListener("click", () => {
     location.href = "./signin.html";
   });
-  document.getElementById("search").addEventListener("input", debouncing);
+  getId("search").addEventListener("input", debouncing);
   getId("search_results").addEventListener("mouseleave", () => {
     getId("search_results").innerHTML = null;
   });
@@ -887,8 +888,9 @@ if (matchMedia) {
 function WidthChange(mq) {
   if (mq.matches) {
     flag = false;
-    document.getElementById("master_navbar").innerHTML = mNavbar();
-    document.getElementById("search").addEventListener("input", ()=>{
+    getId("master_navbar").innerHTML = mNavbar();
+    getId("master_navbar").style.backgroundColor = "#7ED957";
+    getId("search").addEventListener("input", ()=>{
       getId("search_results").style.zIndex = "-1"
       debouncing()
     });
@@ -919,8 +921,8 @@ function WidthChange(mq) {
   })()
   } else {
     flag = true;
-    document.getElementById("master_navbar").innerHTML = navbar();
-    document.getElementById("search").addEventListener("input", debouncing);
+    getId("master_navbar").innerHTML = navbar();
+    getId("search").addEventListener("input", debouncing);
     getId("nav_logo_img").addEventListener("click", () => {
       location.href = "./index.html";
     });

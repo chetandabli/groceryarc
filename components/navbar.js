@@ -25,7 +25,7 @@ const navbar = ()=>{
                         <div id="nav_basket"><i class="bi bi-basket2-fill"></i></div>
                         <div>
                             <p>My Basket</p>
-                            <p id="nav_cart_item_count">0 items</p>
+                            <p id="nav_cart_item_count"></p>
                         </div>
                     </div>
                     <div id="cart_pop_up"></div>
@@ -52,7 +52,7 @@ const navbar = ()=>{
 }
 
 const mNavbar = ()=>{
-    return `<div id="top_menu_mobile">
+    return `      <div id="top_menu_mobile">
     <div id="top_menu_mobile_first">
       <div id="mobile_menu_lines">
         <div></div>
@@ -72,6 +72,9 @@ const mNavbar = ()=>{
     </div>
     <div id="top_menu_mobile_fifth">
       <i class="bi bi-cart"></i>
+      <div id="cart_count_mobile_div">
+        <p id="cart_count_mobile_tag"></p>
+      </div>
     </div>
   </div>
   <div id="top_search_mobile">

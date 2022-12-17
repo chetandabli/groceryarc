@@ -2059,6 +2059,20 @@
       "id": 1
     },
     {
+      "off": "Get 31% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/40048457_8-fresho-potato-new-crop.jpg",
+      "proName": "Fresho",
+      "detail": "Potato",
+      "rate": 4.1,
+      "select": "<option>1 kg - Rs. 29 </option>",
+      "price": 29,
+      "strike": "Rs.43",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 2
+    },
+    {
       "off": "Get 42% off ✹",
       "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000204_16-fresho-tomato-local.jpg",
       "proName": "Fresho",
@@ -2070,7 +2084,7 @@
       "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
       "quant": 1,
       "category": "fruitsVeg",
-      "id": 2
+      "id": 3
     },
     {
       "off": "Get 20% off ✹",
@@ -2086,20 +2100,6 @@
       "category": "fruitsVeg",
       "id": 3
     },
-    {
-      "off": "Get 10% off ✹",
-      "image_url": "https://www.bigbasket.com/media/uploads/p/s/1207190_6-harpic-original-disinfectant-toilet-cleaner-liquid.jpg",
-      "proName": "Harpic",
-      "detail": "Disinfectant Toilet Cleaner Liquid,Orininal",
-      "rate": 4.2,
-      "select": "500ml, Rs.88.00",
-      "price": 524.01,
-      "strike": "Rs.535",
-      "common": "Standard Delivery:Today 3:00PM-7:30PM",
-      "quant": 1,
-      "category": "cleaningHouse",
-      "id": 4
-    }
   ],
   "user": []
 }

@@ -2085,8 +2085,21 @@
       "quant": 1,
       "category": "fruitsVeg",
       "id": 3
+    },
+    {
+      "off": "Get 10% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/1207190_6-harpic-original-disinfectant-toilet-cleaner-liquid.jpg",
+      "proName": "Harpic",
+      "detail": "Disinfectant Toilet Cleaner Liquid,Orininal",
+      "rate": 4.2,
+      "select": "500ml, Rs.88.00",
+      "price": 524.01,
+      "strike": "Rs.535",
+      "common": "Standard Delivery:Today 3:00PM-7:30PM",
+      "quant": 1,
+      "category": "cleaningHouse",
+      "id": 4
     }
   ],
   "user": []
-
 }

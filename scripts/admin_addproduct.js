@@ -1,3 +1,16 @@
+function add_produc(){
+    alert("New product added to tha database")
+}
+function delete_product(){
+    alert("Selected product has been deleted from the database")
+}
+function update_pric(){
+    alert("New price has been updated on the product")
+}
+
+
+
+
 let btn=document.getElementById("add_product");
 btn.onclick =()=>{
     createPost();

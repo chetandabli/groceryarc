@@ -583,7 +583,7 @@ const menusShow = () => {
     let p = creEle("a");
     p.href = "./product.html";
     p.innerText = Object.keys(el)[0];
-    console.log(el[`${Object.keys(el)}`]);
+    // console.log(el[`${Object.keys(el)}`]);
     p.onmouseover = () => {
       secondMenus(el[`${Object.keys(el)[0]}`]);
     };
@@ -660,7 +660,7 @@ let debouncing = () => {
         return data;
       })
     );
-    console.log(results);
+    // console.log(results);
     append(results);
   }, 1000);
 };
@@ -767,7 +767,7 @@ if (mediaQueryList.matches) {
     try{
       let res=await fetch(`${url}cart`)
       let data= await res.json();
-      console.log(data)
+      // console.log(data)
       getId("cart_count_mobile_tag").innerText = data.length
     }
     catch(err){
@@ -779,6 +779,7 @@ if (mediaQueryList.matches) {
 } else {
   flag = true;
   getId("master_navbar").innerHTML = navbar();
+  getId("master_navbar").style.backgroundColor = "#fff";
   getId("nav_logo_img").addEventListener("click", () => {
     location.href = "./index.html";
   });
@@ -866,7 +867,7 @@ if (mediaQueryList.matches) {
     try{
       let res=await fetch(`${url}cart`)
       let data= await res.json();
-      console.log(data)
+      // console.log(data)
       getId("nav_cart_item_count").innerText = `${data.length} items`
     }
     catch(err){
@@ -910,7 +911,7 @@ function WidthChange(mq) {
     try{
       let res=await fetch(`${url}cart`)
       let data= await res.json();
-      console.log(data)
+      // console.log(data)
       getId("cart_count_mobile_tag").innerText = data.length
     }
     catch(err){
@@ -922,6 +923,7 @@ function WidthChange(mq) {
   } else {
     flag = true;
     getId("master_navbar").innerHTML = navbar();
+    getId("master_navbar").style.backgroundColor = "#fff";
     getId("search").addEventListener("input", debouncing);
     getId("nav_logo_img").addEventListener("click", () => {
       location.href = "./index.html";
@@ -1009,7 +1011,7 @@ function WidthChange(mq) {
       try{
         let res=await fetch(`${url}cart`)
         let data= await res.json();
-        console.log(data)
+        // console.log(data)
         getId("nav_cart_item_count").innerText = `${data.length} items`
       }
       catch(err){

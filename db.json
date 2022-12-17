@@ -2084,7 +2084,81 @@
       "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
       "quant": 1,
       "category": "fruitsVeg",
-      "id": 3
+
+      "id": 10
+    },
+    {
+      "off": "Get 20% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg",
+      "proName": "Fresho",
+      "detail": "Onion",
+      "rate": 4.1,
+      "select": "<option>5 kg - Rs.131</option>",
+      "price": 131,
+      "strike": "Rs.165",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 11
+    },
+    {
+      "off": "Get 31% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/40048457_8-fresho-potato-new-crop.jpg",
+      "proName": "Fresho",
+      "detail": "Potato",
+      "rate": 4.1,
+      "select": "<option>1 kg - Rs. 29 </option>",
+      "price": 29,
+      "strike": "Rs.43",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 12
+    },
+    {
+      "off": "Get 25% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg",
+      "proName": "Fresho",
+      "detail": "Cauliflower",
+      "rate": 4.5,
+      "select": "<option>1 pc - Rs. 13 </option>",
+      "price": 13,
+      "strike": "Rs.17",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 13
+    },
+    {
+      "off": "Get 20% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg",
+      "proName": "Fresho",
+      "detail": "Onion",
+      "rate": 4.1,
+      "select": "<option>5 kg - Rs.131</option>",
+      "price": 131,
+      "strike": "Rs.165",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 14
+    },
+    {
+      "off": "Get 20% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000284_11-fresho-green-peas.jpg",
+      "proName": "Fresho",
+      "detail": "Green Peas",
+      "rate": 4.4,
+      "select": "<option>1 kg Pack - Rs. 99</option>",
+      "price": 99,
+      "strike": "Rs.123",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 15
+
+   
+
     }
   ],
 

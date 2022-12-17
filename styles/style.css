@@ -115,11 +115,6 @@ h2{
   font-weight: normal;
   transition: .5s ease-out;
 }
-@media only screen and (max-width: 1058px) {
-  #container {
-    margin-top: 15rem;
-  }
-}
 @media only screen and (min-width: 750px) and (max-width: 1000px) {
   #content,
   #fruits,

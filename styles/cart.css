@@ -42,8 +42,9 @@
     margin:auto;
     padding:10px;
     display:grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(6,1fr);
     margin-bottom: 10px;
+    gap:10px;
     border:1px solid grey;
     border-radius: 10px;
     height:140px;
@@ -114,4 +115,43 @@
 #checkout:hover{
     background-color: rgb(158, 14, 14);
    
+}
+#total-di{
+    width:73%;
+    background-color: black;
+    
+    margin:auto;
+    height:60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding:20px;
+
+    align-items: center;
+    border-radius: 10px;
+}
+#total-di>h2{
+    color:white;
+   
+    font-weight: lighter;
+
+}
+#total-item{
+    text-align: center;
+}
+.savelater{ 
+    height:30px;
+    border:none;
+    background-color: white;
+    text-decoration: underline;
+}
+.savelater:hover{
+    color:green;
+}
+#save_as_later{
+    width:73%;
+    margin:auto;
+    text-align: center;
+}
+.saveA{
+    height:30px;
 }

@@ -1,5 +1,5 @@
-const navbar = ()=>{
-    return `<div id="navbar">
+const navbar = () => {
+  return `<div id="navbar">
     <div id="nav_main">
         <div id="nav_logo">
             <img id="nav_logo_img" src="https://i.ibb.co/Kqh1BZB/GA-2.png" alt="logo">
@@ -48,11 +48,11 @@ const navbar = ()=>{
             <div id="lastMenus"></div>
         </div>
     </div>
-</div>`
-}
+</div>`;
+};
 
-const mNavbar = ()=>{
-    return `      <div id="top_menu_mobile">
+const mNavbar = () => {
+  return `      <div id="top_menu_mobile">
     <div id="top_menu_mobile_first">
       <div id="mobile_menu_lines">
         <div></div>
@@ -83,7 +83,7 @@ const mNavbar = ()=>{
       <button class="search_button" id="search_button"><i class="bi bi-search" style="color: #fff"></i></button>
   </div>
     <div id="search_results"></div>
-  </div>`
-}
+  </div>`;
+};
 
-export {navbar, mNavbar}
+export { navbar, mNavbar };

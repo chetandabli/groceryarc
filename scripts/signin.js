@@ -28,6 +28,7 @@ async function LoginFunction(event){
 function tempFunction(p, pass){
     if(p == pass){
         alert("Login successful!")
+        location.href = "./index.html";
     }else{
         alert("please enter correct password!")
     }

@@ -2045,32 +2045,46 @@
   ],
   "cart": [
     {
-      "off": "Get 20% off ✹",
-      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000263_12-fresho-strawberry.jpg",
+      "off": "Get 31% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/40048457_8-fresho-potato-new-crop.jpg",
       "proName": "Fresho",
-      "detail": "Strawberry",
-      "rate": 4.2,
-      "select": "<option>200 gm  - Rs. 55</option>",
-      "price": 55,
-      "strike": "Rs.70",
+      "detail": "Potato",
+      "rate": 4.1,
+      "select": "<option>1 kg - Rs. 29 </option>",
+      "price": 29,
+      "strike": "Rs.43",
       "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
       "quant": 1,
       "category": "fruitsVeg",
-      "id": 3
+      "id": 9
+    },
+    {
+      "off": "Get 40% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000201_15-fresho-tomato-hybrid.jpg",
+      "proName": "Fresho",
+      "detail": "Tomato - Hybrid",
+      "rate": 4,
+      "select": "<option>500 gm - Rs.7</option>",
+      "price": 7,
+      "strike": "Rs.11",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 13
     },
     {
       "off": "Get 20% off ✹",
-      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000263_12-fresho-strawberry.jpg",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000102_17-fresho-cucumber.jpg",
       "proName": "Fresho",
-      "detail": "Strawberry",
-      "rate": 4.2,
-      "select": "<option>200 gm  - Rs. 55</option>",
-      "price": 55,
-      "strike": "Rs.70",
+      "detail": "Cucumber",
+      "rate": 4.1,
+      "select": "<option>1 kg Pouch- Rs.21</option>",
+      "price": 21,
+      "strike": "Rs.27",
       "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
       "quant": 1,
       "category": "fruitsVeg",
-      "id": 5
+      "id": 14
     },
     {
       "off": "Get 25% off ✹",
@@ -2084,7 +2098,7 @@
       "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
       "quant": 1,
       "category": "fruitsVeg",
-      "id": 6
+      "id": 15
     }
   ],
   "save_later": [],

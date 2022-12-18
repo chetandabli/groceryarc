@@ -15,22 +15,22 @@
         <!-- <h2>Delivery Address</h2> -->
         <div id="form">
           <h3>Personal Details</h3>
-          <form action="">
+          <form action="" id="formData">
             <label for="">* Enter first name</label> <br />
-            <input type="text" /> <br />
+            <input id="firstName" type="text" /> <br />
             <label for="">* Enter last name</label> <br />
-            <input type="text" /> <br />
+            <input id="lastName" type="text" /> <br />
             <label for="">* Enter contact number</label> <br />
-            <input type="number" />
+            <input id="contact" type="number" />
             <h3>Address Details</h3>
             <label for="">* House No</label> <br />
-            <input type="text" /> <br />
+            <input id="houseNo" type="text" /> <br />
             <label for="">Enter apartment name</label> <br />
-            <input type="text" /> <br />
+            <input id="apartmentName" type="text" /> <br />
             <label for="">Enter street details</label> <br />
-            <input type="text" /> <br />
+            <input id="streetName" type="text" /> <br />
             <label for="">Enter landmark for easy reach out</label> <br />
-            <input type="text" />
+            <input id="landmark" type="text" />
             <label for=""></label> <br />
             <label for="">Enter city name</label> <br />
             <select name="" id="city">
@@ -41,8 +41,10 @@
             </select>
             <br />
             <label for="">* Enter Pincode</label><br />
-            <input type="number" /> <br />
-            <button id="address">ADD ADDRESS</button>
+            <input id="pincode" type="number" /> <br />
+            <button id="address" value="submit">ADD ADDRESS</button>
+            <!-- <input type="submit" id="address" value="ADD ADDRESS"> -->
+            <!-- <input id="address" type="submit" value="ADD ADDRESS"> -->
           </form>
         </div>
       </div>
@@ -53,6 +55,7 @@
             <p id="basket_val">Basket Value : <span></span></p>
             <p>Delivery Charge : <span style="color: green"> FREE</span></p>
             <h4 id="basket_total">Total Amount Payable : <span></span></h4>
+            <button id="place">Place Order</button>
           </div>
         </div>
       </div>
@@ -65,4 +68,84 @@
   console.log(data);
   document.querySelector("#basket_val span").innerHTML = `Rs ${data}`;
   document.querySelector("#basket_total span").innerHTML = `Rs ${data}`;
+
+  let form = document.getElementById("formData");
+  let LSDatakey = "delivery";
+  let LSdata = JSON.parse(localStorage.getItem(LSDatakey));
+
+  if (LSdata === null) {
+    LSdata = [];
+  }
+
+  // form.addEventListener("submit", function (el) {
+  document.querySelector("#address").addEventListener("click", function (el) {
+    el.preventDefault();
+    let obj = {
+      firstName: form.firstName.value,
+      lastName: form.lastName.value,
+      contact: form.contact.value,
+      houseNo: form.houseNo.value,
+      apartmentName: form.apartmentName.value,
+      streetName: form.streetName.value,
+      landmark: form.landmark.value,
+      city: form.city.value,
+      pincode: form.pincode.value,
+    };
+    for (let key in obj) {
+      if (obj[key] === "") {
+        alert("Fill All Fields");
+        return;
+      }
+    }
+    LSdata.push(obj);
+    localStorage.setItem(LSDatakey, JSON.stringify(LSdata));
+    // displayEmptyAddress(obj)
+    alert("Billing Address Added");
+    displayAddress(obj);
+  });
+
+  let placebtn = document
+    .getElementById("place")
+    .addEventListener("click", function () {
+      alert("Order Placed");
+      window.location.assign("/index.html");
+    });
+
+  function displayAddress(obj) {
+    alert(`
+          
+      firstName: ${obj.firstName} ${"\n"}
+      lastName: ${obj.lastName} ${"\n"}
+      contact: ${obj.contact} ${"\n"}
+      houseNo: ${obj.houseNo} ${"\n"}
+      apartmentName: ${obj.apartmentName} ${"\n"}
+      streetName: ${obj.streetName} ${"\n"}
+      landmark: ${obj.landmark} ${"\n"}
+      city: ${obj.city} ${"\n"}
+      pincode: ${obj.pincode} ${"\n"}
+      `);
+  }
+  // function displayAddress(obj){
+
+  //   form.firstName.value=obj.firstName;
+  //   form.lastName.value=obj.lastName;
+  //   form.contact.value=obj.contact;
+  //   form.houseNo.value=obj.houseNo;
+  //   form.apartmentName.value=obj.apartmentName;
+  //   form.streetName.value=obj.streetName;
+  //   form.landmark.value=obj.landmark;
+  //   form.city.value=obj.city;
+  //   form.pincode.value=obj.pincode;
+  // }
+  // function displayEmptyAddress(obj){
+  //   form.firstName.value="";
+  //   form.lastName.value="";
+  //   form.contact.value="";
+  //   form.houseNo.value="";
+  //   form.apartmentName.value="";
+  //   form.streetName.value="";
+  //   form.landmark.value="";
+  //   form.city.value="";
+  //   form.pincode.value="";
+  // }
 </script>

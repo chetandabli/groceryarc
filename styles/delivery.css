@@ -80,3 +80,20 @@ h4 {
   padding: 6%;
   margin: auto;
 }
+#place {
+  height: 6vh;
+  margin-left: 5%;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: green;
+  border: none;
+  letter-spacing: 0.1rem;
+  border-radius: 0.2rem;
+  margin-top: 2%;
+  padding: 1%;
+  color: #fff;
+  margin-bottom: 2%;
+}
+#place:hover {
+  background-color: rgb(65, 174, 76);
+}

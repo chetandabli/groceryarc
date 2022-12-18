@@ -2043,50 +2043,7 @@
       "category": "gourmetFood"
     }
   ],
-  "cart": [
-    {
-      "off": "Get 31% off ✹",
-      "image_url": "https://www.bigbasket.com/media/uploads/p/s/40048457_8-fresho-potato-new-crop.jpg",
-      "proName": "Fresho",
-      "detail": "Potato",
-      "rate": 4.1,
-      "select": "<option>1 kg - Rs. 29 </option>",
-      "price": 29,
-      "strike": "Rs.43",
-      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
-      "quant": 1,
-      "category": "fruitsVeg",
-      "id": 1
-    },
-    {
-      "off": "Get 25% off ✹",
-      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000031_21-fresho-banana-yelakki.jpg",
-      "proName": "Fresho",
-      "detail": "Banana - Yelakki",
-      "rate": 4.2,
-      "select": "<option>1 kg - Rs. 83</option>",
-      "price": 83,
-      "strike": "Rs.110",
-      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
-      "quant": 1,
-      "category": "fruitsVeg",
-      "id": 2
-    },
-    {
-      "off": "Get 20% off ✹",
-      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000188_12-fresho-palak-cleaned-without-roots.jpg",
-      "proName": "Fresho",
-      "detail": "Palak - Cleaned, without roots",
-      "rate": 4,
-      "select": "<option>500 gm - Rs. 25</option>",
-      "price": 25,
-      "strike": "Rs.32",
-      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
-      "quant": 1,
-      "category": "fruitsVeg",
-      "id": 3
-    }
-  ],
+  "cart": [],
   "save_later": [],
   "user": [
     {
@@ -2098,6 +2055,20 @@
       "description": "ujyttrttytr",
       "checked": "on",
       "id": 1
+    },
+    {
+      "off": "",
+      "image_url": "",
+      "proName": "",
+      "detail": "",
+      "rate": "",
+      "select": "<option>3 kg Pack - Rs. 420</option>",
+      "price": "",
+      "strike": "",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": "1",
+      "category": "",
+      "id": 2
     }
   ]
 }

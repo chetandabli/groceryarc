@@ -36,14 +36,14 @@ let get_data=async()=>{
     let res=await fetch(`${url}`)
     let data= await res.json();
     console.log(data)
-    let len =data.length;
-    append_data(data,base_url,len)
+    
+    append_data(data,base_url)
     f_v.innerText=`(${data.length})`
 }
 
 get_data();
 
-const append_data=(data,base_url,len)=>{
+const append_data=(data,base_url)=>{
 
 cont.innerHTML=null;
 f_v.innerText=`(${data.length})`;

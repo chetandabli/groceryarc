@@ -574,6 +574,30 @@ var categories = [
   },
 ];
 
+var belowData;
+const cartCount = async () => {
+  try {
+    let res = await fetch(`${url}cart`);
+    belowData = await res.json();
+    getId("nav_cart_item_count").innerText = `${belowData.length} items`;
+  } catch (err) {
+    getId("nav_cart_item_count").innerText = `0 items`;
+    console.log(err);
+  }
+}
+
+const cartCountMobile = async () => {
+  try {
+    let res = await fetch(`${url}cart`);
+    let data = await res.json();
+    // console.log(data)
+    getId("cart_count_mobile_tag").innerText = data.length;
+  } catch (err) {
+    getId("cart_count_mobile_tag").innerText = 0;
+    console.log(err);
+  }
+}
+
 const menusShow = () => {
   getId("firstMenus").innerHTML = null;
   getId("secondMenus").innerHTML = null;
@@ -629,7 +653,6 @@ function thirdMenus(data) {
 //cart items pop up
 const cartPop = (data) => {
   getId("cart_pop_up").innerHTML = null;
-  console.log("loppppppp");
   let subtotal = 0;
 
   let granddiv = creEle("div");
@@ -880,6 +903,9 @@ function append(data) {
   let buttomMassage = creEle("p");
   buttomMassage.classList = "buttomMassage";
   buttomMassage.innerText = `VIEW ALL PRODUCTS(${i})`;
+  buttomMassage.onclick = ()=>{
+    location.href = "./product.html";
+  }
   getId("search_results").append(buttomMassage);
 }
 
@@ -922,17 +948,10 @@ if (mediaQueryList.matches) {
   getId("top_menu_mobile_fifth").addEventListener("click", () => {
     location.href = "./cart.html";
   });
-  (async () => {
-    try {
-      let res = await fetch(`${url}cart`);
-      let data = await res.json();
-      // console.log(data)
-      getId("cart_count_mobile_tag").innerText = data.length;
-    } catch (err) {
-      getId("cart_count_mobile_tag").innerText = 0;
-      console.log(err);
-    }
-  })();
+  cartCountMobile();
+  setInterval(() => {
+    cartCountMobile();
+  }, 100);
 } else {
   flag = true;
   getId("master_navbar").innerHTML = navbar();
@@ -1027,17 +1046,8 @@ if (mediaQueryList.matches) {
       }
     }
   };
-  var belowData;
-  (async () => {
-    try {
-      let res = await fetch(`${url}cart`);
-      belowData = await res.json();
-      getId("nav_cart_item_count").innerText = `${belowData.length} items`;
-    } catch (err) {
-      getId("nav_cart_item_count").innerText = `0 items`;
-      console.log(err);
-    }
-  })();
+
+  cartCount();
 
   getId("nav_cart").addEventListener("mouseover", () => {
     cartPop(belowData);
@@ -1052,6 +1062,9 @@ if (mediaQueryList.matches) {
       "loggedName"
     )}`;
   }
+  setInterval(() => {
+    cartCount();
+  }, 100);
 }
 // media query event handler
 if (matchMedia) {
@@ -1083,17 +1096,10 @@ function WidthChange(mq) {
     getId("top_menu_mobile_fifth").addEventListener("click", () => {
       location.href = "./cart.html";
     });
-    (async () => {
-      try {
-        let res = await fetch(`${url}cart`);
-        let data = await res.json();
-        // console.log(data)
-        getId("cart_count_mobile_tag").innerText = data.length;
-      } catch (err) {
-        getId("cart_count_mobile_tag").innerText = 0;
-        console.log(err);
-      }
-    })();
+    cartCountMobile();
+    setInterval(() => {
+      cartCountMobile();
+    }, 100);
   } else {
     flag = true;
     getId("master_navbar").innerHTML = navbar();
@@ -1181,29 +1187,23 @@ function WidthChange(mq) {
         }
       }
     };
-    var belowData;
-    (async () => {
-      try {
-        let res = await fetch(`${url}cart`);
-        belowData = await res.json();
-        getId("nav_cart_item_count").innerText = `${belowData.length} items`;
-      } catch (err) {
-        getId("nav_cart_item_count").innerText = `0 items`;
-        console.log(err);
-      }
-    })();
+
+    cartCount();
     getId("nav_cart").addEventListener("mouseover", () => {
       cartPop(belowData);
     });
     getId("cart_pop_up").addEventListener("mouseleave", () => {
       getId("cart_pop_up").innerHTML = null;
     });
-  }
-  if (localStorage.getItem("loggedName")) {
-    getId(
-      "login_button_nav"
-    ).innerHTML = `<i class="bi bi-person"></i> ${localStorage.getItem(
-      "loggedName"
-    )}`;
+    setInterval(() => {
+      cartCount();
+    }, 100);
+    if (localStorage.getItem("loggedName")) {
+      getId(
+        "login_button_nav"
+      ).innerHTML = `<i class="bi bi-person"></i> ${localStorage.getItem(
+        "loggedName"
+      )}`;
+    }
   }
 }

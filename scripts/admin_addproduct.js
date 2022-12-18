@@ -46,7 +46,7 @@ category
     
 
 }
-let res=await fetch(" http://localhost:3000/user", {
+let res=await fetch(" http://localhost:3000/gourmetFood", {
     method: 'POST',
     body: JSON.stringify(send_this_data),
     headers: {
@@ -69,7 +69,7 @@ dele_btn.onclick=()=>{
 const deletePost =async () =>{
     let delete_id=document.getElementById("delete_id").value
 
-    let res = await fetch(` http://localhost:3000/user/${delete_id}`,{
+    let res = await fetch(` http://localhost:3000/gourmetFood/${delete_id}`,{
 
         method:"DELETE",
 
@@ -97,7 +97,7 @@ const updatePost = async() => {
         
         price:new_price
     }
-    let res = await fetch(` http://localhost:3000/user/${update_id}`,{
+    let res = await fetch(` http://localhost:3000/gourmetFood/${update_id}`,{
 
         method:"PATCH",
         body:JSON.stringify(send_this_data),

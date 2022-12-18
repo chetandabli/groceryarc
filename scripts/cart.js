@@ -28,11 +28,12 @@ let get_data=async()=>{
 const append_data=(data)=>{
     let total_amount=0;
     if(data.length==0){
+        localStorage.setItem("order_value", total_amount);
         document.getElementById("cart").innerHTML=` <div id="init">
         <div >
             <img src="https://img.freepik.com/premium-vector/shopping-cart-with-products-illustration-buying-food-supermarket-grocery-store-trolley-fresh-fruits-vegetables-purchase-dairy-products-cereals-healthy-diet-nutrition_276875-342.jpg?w=2000" alt="">
             <p><h style="color:rgb(6, 63, 6)">Let's fill the empty</h>&nbsp;<h style="color:green">Basket</h></p>
-            <a href="./index.html"><button id="conti">Continue Shopping</button></a>
+            <a href="./product.html"><button id="conti">Continue Shopping</button></a>
         </div>
     </div>`
 

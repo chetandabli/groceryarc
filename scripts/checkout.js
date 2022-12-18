@@ -6,7 +6,7 @@ footer_new.innerHTML = footer();
 
 if (!localStorage.getItem("loggedName")) {
     alert("Please login first in order to checkout!");
-    window.location.assign("/signin.html");
+    window.location.assign("./signin.html");
 } else {
   let data = JSON.parse(localStorage.getItem("order_value")) || 0;
   console.log(data);
@@ -52,7 +52,7 @@ if (!localStorage.getItem("loggedName")) {
     .getElementById("place")
     .addEventListener("click", function () {
       alert("Order Placed");
-      window.location.assign("/index.html");
+      window.location.assign("./index.html");
     });
 
   function displayAddress(obj) {

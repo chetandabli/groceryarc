@@ -2046,31 +2046,17 @@
   "cart": [
     {
       "off": "Get 20% off ✹",
-      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000150_19-fresho-onion.jpg",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000263_12-fresho-strawberry.jpg",
       "proName": "Fresho",
-      "detail": "Onion",
-      "rate": 4.1,
-      "select": "<option>5 kg - Rs.131</option>",
-      "price": 131,
-      "strike": "Rs.165",
+      "detail": "Strawberry",
+      "rate": 4.2,
+      "select": "<option>200 gm  - Rs. 55</option>",
+      "price": 55,
+      "strike": "Rs.70",
       "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
       "quant": 1,
       "category": "fruitsVeg",
-      "id": 1
-    },
-    {
-      "off": "Get 42% off ✹",
-      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000204_16-fresho-tomato-local.jpg",
-      "proName": "Fresho",
-      "detail": "Tomato - Local",
-      "rate": 4,
-      "select": "<option>500 gm - Rs. 5</option>",
-      "price": 5,
-      "strike": "Rs.9",
-      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
-      "quant": 1,
-      "category": "fruitsVeg",
-      "id": 2
+      "id": 3
     },
     {
       "off": "Get 20% off ✹",
@@ -2084,9 +2070,166 @@
       "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
       "quant": 1,
       "category": "fruitsVeg",
-      "id": 3
+      "id": 5
+    },
+    {
+      "off": "Get 25% off ✹",
+      "image_url": "https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg",
+      "proName": "Fresho",
+      "detail": "Cauliflower",
+      "rate": 4.5,
+      "select": "<option>1 pc - Rs. 13 </option>",
+      "price": 13,
+      "strike": "Rs.17",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": 1,
+      "category": "fruitsVeg",
+      "id": 6
     }
   ],
 
-  "user": []
+  "save_later":[],
+  "user": [
+    {
+      "off": "",
+      "image_url": "",
+      "proName": "",
+      "detail": "",
+      "rate": "",
+      "select": "<option>3 kg Pack - Rs. 420</option>",
+      "price": "",
+      "strike": "",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": "1",
+      "category": "",
+      "id": 1
+    },
+    {
+      "off": "",
+      "image_url": "",
+      "proName": "",
+      "detail": "",
+      "rate": "",
+      "select": "<option>3 kg Pack - Rs. 420</option>",
+      "price": "",
+      "strike": "",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": "1",
+      "category": "",
+      "id": 4
+    },
+    {
+      "off": "",
+      "image_url": "",
+      "proName": "",
+      "detail": "",
+      "rate": "",
+      "select": "<option>3 kg Pack - Rs. 420</option>",
+      "price": "",
+      "strike": "",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": "1",
+      "category": "",
+      "id": 5
+    },
+    {
+      "off": "",
+      "image_url": "",
+      "proName": "",
+      "detail": "",
+      "rate": "",
+      "select": "<option>3 kg Pack - Rs. 420</option>",
+      "price": "",
+      "strike": "",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": "1",
+      "category": "",
+      "id": 6
+    },
+    {
+      "off": "",
+      "image_url": "",
+      "proName": "",
+      "detail": "",
+      "rate": "",
+      "select": "<option>3 kg Pack - Rs. 420</option>",
+      "price": "",
+      "strike": "",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": "1",
+      "category": "",
+      "id": 7
+    },
+    {
+      "off": "",
+      "image_url": "",
+      "proName": "",
+      "detail": "",
+      "rate": "",
+      "select": "<option>3 kg Pack - Rs. 420</option>",
+      "price": "",
+      "strike": "",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": "1",
+      "category": "",
+      "id": 8
+    },
+    {
+      "off": "",
+      "image_url": "",
+      "proName": "",
+      "detail": "",
+      "rate": "",
+      "select": "<option>3 kg Pack - Rs. 420</option>",
+      "price": "",
+      "strike": "",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": "1",
+      "category": "",
+      "id": 9
+    },
+    {
+      "off": "",
+      "image_url": "",
+      "proName": "",
+      "detail": "",
+      "rate": "",
+      "select": "<option>3 kg Pack - Rs. 420</option>",
+      "price": "",
+      "strike": "",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": "1",
+      "category": "",
+      "id": 10
+    },
+    {
+      "off": "",
+      "image_url": "",
+      "proName": "",
+      "detail": "",
+      "rate": "",
+      "select": "<option>3 kg Pack - Rs. 420</option>",
+      "price": "",
+      "strike": "",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": "1",
+      "category": "",
+      "id": 11
+    },
+    {
+      "off": "",
+      "image_url": "",
+      "proName": "",
+      "detail": "",
+      "rate": "",
+      "select": "<option>3 kg Pack - Rs. 420</option>",
+      "price": "",
+      "strike": "",
+      "common": "Standard Delivery:Tomorrow 9:00AM-1:30PM",
+      "quant": "1",
+      "category": "",
+      "id": 12
+    }
+  ]
 }
+

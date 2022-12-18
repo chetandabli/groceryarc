@@ -1,5 +1,5 @@
-const navbar = ()=>{
-    return `<div id="navbar">
+const navbar = () => {
+  return `<div id="navbar">
     <div id="nav_main">
         <div id="nav_logo">
             <img id="nav_logo_img" src="https://i.ibb.co/Kqh1BZB/GA-2.png" alt="logo">
@@ -25,7 +25,7 @@ const navbar = ()=>{
                         <div id="nav_basket"><i class="bi bi-basket2-fill"></i></div>
                         <div>
                             <p>My Basket</p>
-                            <p id="nav_cart_item_count">0 items</p>
+                            <p id="nav_cart_item_count"></p>
                         </div>
                     </div>
                     <div id="cart_pop_up"></div>
@@ -48,11 +48,11 @@ const navbar = ()=>{
             <div id="lastMenus"></div>
         </div>
     </div>
-</div>`
-}
+</div>`;
+};
 
-const mNavbar = ()=>{
-    return `<div id="top_menu_mobile">
+const mNavbar = () => {
+  return `      <div id="top_menu_mobile">
     <div id="top_menu_mobile_first">
       <div id="mobile_menu_lines">
         <div></div>
@@ -72,6 +72,9 @@ const mNavbar = ()=>{
     </div>
     <div id="top_menu_mobile_fifth">
       <i class="bi bi-cart"></i>
+      <div id="cart_count_mobile_div">
+        <p id="cart_count_mobile_tag"></p>
+      </div>
     </div>
   </div>
   <div id="top_search_mobile">
@@ -80,7 +83,7 @@ const mNavbar = ()=>{
       <button class="search_button" id="search_button"><i class="bi bi-search" style="color: #fff"></i></button>
   </div>
     <div id="search_results"></div>
-  </div>`
-}
+  </div>`;
+};
 
-export {navbar, mNavbar}
+export { navbar, mNavbar };

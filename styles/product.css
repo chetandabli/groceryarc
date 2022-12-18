@@ -4,14 +4,17 @@
     
     width: 75%;
     margin: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 #lhs{
     flex: 2;
-    border: 1px solid red;
+    border-right: 0.1px solid rgb(238, 234, 234);
     margin-right: 10px;
 }
 #rhs{
     flex: 7;
+    
 }
 #top{
    
@@ -179,7 +182,97 @@
 
 #cat{
     font-size: 16px;
+
+    font-weight: 100;
+    text-align: left;
+   border-bottom: 1px solid grey;
+}
+
+#category>p{
+ margin-left: 15px;
+ font-size: 13px;
+ margin-top: -5px;
+ color: rgb(107, 106, 106);
+}
+
+#category>p:hover{
+    cursor: pointer;
+    color: teal;
+}
+
+#fruit{
+    font-size: 14px;
+    color: #67a27c;
+}
+
+#fruit:hover{
+    cursor: pointer;
+}
+
+#bnd{
+    font-size: 16px;
+    font-weight: 100;
+    text-align: left;
+   border-bottom: 1px solid grey;
+}
+
+#brand div{
+ margin-left: 15px;
+ font-size: 13px;
+ margin-top: -15px;
+ color: rgb(107, 106, 106);
+}
+
+#brand div:hover{
+    cursor: pointer;
+    color: teal;
+}
+
+#prc{
+    font-size: 16px;
+    font-weight: 100;
+    text-align: left;
+   border-bottom: 1px solid grey;
+}
+
+#price div{
+ margin-left: 15px;
+ font-size: 13px;
+ margin-top: -15px;
+ color: rgb(107, 106, 106);
+}
+
+#price div:hover{
+    cursor: pointer;
+    color: teal;
+}
+
+#dis{
+    font-size: 16px;
+    font-weight: 100;
+    text-align: left;
+   border-bottom: 1px solid grey;
+}
+
+#discount div{
+ margin-left: 15px;
+ font-size: 13px;
+ margin-top: -15px;
+ color: rgb(107, 106, 106);
+}
+
+#discount div:hover{
+    cursor: pointer;
+    color: teal;
+
     font-weight: 400;
     text-align: left;
    border-bottom: 1px solid grey;
+
+}
+
+
+#page{
+   
+    margin: 50px 35%;
 }

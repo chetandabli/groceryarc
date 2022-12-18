@@ -14,10 +14,12 @@ let url = " http://localhost:3000/cart";
 
 let main_url = "http://localhost:3000";
 
-let get_data = async () => {
 
-    let res = await fetch(`${url}`)
-    let data = await res.json();
+let get_data=async()=>{
+    
+    let res=await fetch(`${url}`)
+    let data= await res.json();
+
     console.log(data)
     append_data(data)
 }

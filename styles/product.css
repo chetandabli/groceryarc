@@ -62,8 +62,7 @@
 }
 
 .div2{
-    background-color: #f4f3f2;
-    margin: 0px 15px;
+    padding: 0px 15px;
 }
 
 .price{
@@ -113,7 +112,7 @@
 }
 
 .product_div{
-    border-left: 0.1px solid rgb(238, 234, 234);
+    border: 0.1px solid rgb(238, 234, 234);
 }
 
 .product_div:hover{

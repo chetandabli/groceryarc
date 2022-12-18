@@ -1020,6 +1020,9 @@ if (mediaQueryList.matches) {
           <p><i class="bi bi-telephone"></i> 1860 123 1000</p>
           <p><i class="bi bi-geo-alt"></i> Address <span id="nav_address_sign">▽</span></p>
           <p id="login_button_nav"><i class="bi bi-person"></i> Login/Sign Up </p>`;
+          if(localStorage.getItem("loggedName")){
+            getId("login_button_nav").innerHTML = `<i class="bi bi-person"></i> ${localStorage.getItem("loggedName")}`;
+          }
       }
     }
   };
@@ -1043,6 +1046,9 @@ if (mediaQueryList.matches) {
   getId("cart_div_master").addEventListener("mouseleave", () => {
     getId("cart_pop_up").innerHTML = null;
   });
+  if(localStorage.getItem("loggedName")){
+    getId("login_button_nav").innerHTML = `<i class="bi bi-person"></i> ${localStorage.getItem("loggedName")}`;
+  }
 
 }
 // media query event handler
@@ -1194,5 +1200,8 @@ function WidthChange(mq) {
     getId("cart_pop_up").addEventListener("mouseleave", () => {
       getId("cart_pop_up").innerHTML = null;
     });
+  }
+  if(localStorage.getItem("loggedName")){
+    getId("login_button_nav").innerHTML = `<i class="bi bi-person"></i> ${localStorage.getItem("loggedName")}`;
   }
 }

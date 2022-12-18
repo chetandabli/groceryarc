@@ -29,14 +29,20 @@ async function RegisterFunction(event) {
       body: JSON.stringify(userObj)
     });
     if(register_request.ok){
+      localStorage.setItem("regitered", "yes");
         alert("Hurry, User has been created !!");
-         window.location.assign("signin.html")
+        location.href = "./signin.html";
     }else{
         alert("Bad request has been made.");
     }
   } catch (error) {
     alert("Something went wrong. Please try again later.");
   }
+}
+
+if(localStorage.getItem("regitered")){
+  localStorage.removeItem("regitered")
+  location.href = "./signin.html";
 }
 
 

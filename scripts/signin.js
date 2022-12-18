@@ -1,4 +1,10 @@
 
+///////////// footer ///////////////////////
+/////////////////////////////////////////////
+import { footer } from "../components/footer.js";
+let footer_new = document.getElementById("footer");
+footer_new.innerHTML = footer();
+
 
 const Login_btn = document.querySelector("#login form");
 Login_btn.addEventListener("submit",LoginFunction);
@@ -6,24 +12,23 @@ Login_btn.addEventListener("submit",LoginFunction);
 async function LoginFunction(event){
     try {
         event.preventDefault();
-        let all_login_input = document.querySelectorAll("#login input");
-        //let obj = {};
-        for(let i=0;i<all_login_input.length-1;i++){
-            obj[all_login_input[i].id] = all_login_input[i].value;
-        }
-        // console.log(obj);
-        let login_request = await fetch("http://localhost:3000/user",{
-            
-        })
-        if(login_request.ok){
-            
-            alert("User has been successfully Logged In.");
-            window.location.href = "index.html";
-        }else{
-            alert("User not found.");
-        }
+        let username = document.getElementById("username").value;
+        let p = document.getElementById("password").value;
+        let login_request = await fetch(`http://localhost:3000/user?q=${username}`);
+        login_request = await login_request.json()
+        localStorage.setItem("loggedName", login_request[0].name)
+        let pass = login_request[0].password;
+        tempFunction(p, pass)
     } catch (error) {
 		console.log(error);
-        alert("wrong username or password. Please try again later.");
+        alert("user not exist please create account first!.");
+    }
+}
+
+function tempFunction(p, pass){
+    if(p == pass){
+        alert("Login successful!")
+    }else{
+        alert("please enter correct password!")
     }
 }

@@ -627,50 +627,51 @@ function thirdMenus(data) {
 }
 
 //cart items pop up
-const cartPop = (data)=>{
+const cartPop = (data) => {
   getId("cart_pop_up").innerHTML = null;
-  console.log("loppppppp")
+  console.log("loppppppp");
   let subtotal = 0;
 
-
   let granddiv = creEle("div");
-  granddiv.classList = "granddiv"
-  granddiv.setAttribute("id", "granddiv")
-  getId("cart_pop_up").append(granddiv)
+  granddiv.classList = "granddiv";
+  granddiv.style.maxHeight = "320px";
+  granddiv.style.overflowY = "scroll";
+  granddiv.setAttribute("id", "granddiv");
+  getId("cart_pop_up").append(granddiv);
 
-  if(data != undefined){
-    data.forEach((el)=>{
-      let w = ""
-      for(let i = 3; i < el.strike.length; i++){
-        w += el.strike[i]
+  if (data != undefined) {
+    data.forEach((el) => {
+      let w = "";
+      for (let i = 3; i < el.strike.length; i++) {
+        w += el.strike[i];
       }
-      let x = Number(w)-el.price;
+      let x = Number(w) - el.price;
       subtotal += el.price;
       // sample code for pop cart
-  //     let tempDiv = `<div class="cart_pop_div">
-  //     <img class="cart_pop_img" src="${el.image_url}">
-  //     <div class="cart_pop_brand_name">
-  //         <p>${el.proName}</p>
-  //         <p>${el.detail}</p>
-  //         <p>1 x ${el.price}</p>
-  //     </div>
-  //     <div class="last_div_pop_cart">
-  //         <div class="cart_pop_price_div">
-  //             <div>
-  //                 <p>Rs ${el.price}</p>
-  //                 <p style="text-decoration: line-through;">${el.strike}</p>
-  //             </div>
-  //             <p>Saved Rs${x}</p>
-  //         </div>
-  //         <p class="cart_pop_remove"><i class="bi bi-x-circle"></i></p>
-  //     </div>
-  // </div>`
+      //     let tempDiv = `<div class="cart_pop_div">
+      //     <img class="cart_pop_img" src="${el.image_url}">
+      //     <div class="cart_pop_brand_name">
+      //         <p>${el.proName}</p>
+      //         <p>${el.detail}</p>
+      //         <p>1 x ${el.price}</p>
+      //     </div>
+      //     <div class="last_div_pop_cart">
+      //         <div class="cart_pop_price_div">
+      //             <div>
+      //                 <p>Rs ${el.price}</p>
+      //                 <p style="text-decoration: line-through;">${el.strike}</p>
+      //             </div>
+      //             <p>Saved Rs${x}</p>
+      //         </div>
+      //         <p class="cart_pop_remove"><i class="bi bi-x-circle"></i></p>
+      //     </div>
+      // </div>`
 
       let cart_pop_div = creEle("div");
       cart_pop_div.classList = "cart_pop_div";
 
       let img = creEle("img");
-      img.classList = "cart_pop_img"
+      img.classList = "cart_pop_img";
       img.src = el.image_url;
 
       let cart_pop_brand_name = creEle("div");
@@ -686,7 +687,7 @@ const cartPop = (data)=>{
       cart_pop_brand_name.append(p1, p2, p3);
 
       let last_div_pop_cart = creEle("div");
-      last_div_pop_cart.classList = "last_div_pop_cart"
+      last_div_pop_cart.classList = "last_div_pop_cart";
 
       let cart_pop_price_div = creEle("div");
       cart_pop_price_div.classList = "cart_pop_price_div";
@@ -702,89 +703,87 @@ const cartPop = (data)=>{
       div.append(s1, s2);
 
       let p = creEle("p");
-      p.innerText = `Saved Rs${x}`
+      p.innerText = `Saved Rs${x}`;
 
       cart_pop_price_div.append(div, p);
 
       let btn = creEle("p");
       btn.classList = "cart_pop_remove";
       btn.innerHTML = `<i class="bi bi-x-circle"></i>`;
-      btn.onclick = ()=>{
+      btn.onclick = () => {
         removeproduct(el.id);
-      }
+      };
 
-      last_div_pop_cart.append(cart_pop_price_div, btn)
+      last_div_pop_cart.append(cart_pop_price_div, btn);
 
       cart_pop_div.append(img, cart_pop_brand_name, last_div_pop_cart);
 
-      getId("granddiv").append(cart_pop_div)
+      getId("granddiv").append(cart_pop_div);
       // arr.push(tempDiv)
-    })
-  }else{
+    });
+  } else {
     let empty = creEle("p");
     empty.classList = "empty";
-    empty.innerText = "Your basket is empty. Start shopping now!"
-    getId("cart_pop_up").append(empty)
+    empty.innerText = "Your basket is empty. Start shopping now!";
+    getId("cart_pop_up").append(empty);
   }
-    
-    // getId("cart_pop_up").innerHTML = arr.join(" ");
 
-    let div = creEle("div");
-    div.classList = "pop_checkout_box";
+  // getId("cart_pop_up").innerHTML = arr.join(" ");
 
-    let div1 = creEle("div");
-    let p = creEle("p");
-    p.innerText = `**Actual Delivery Charges computed at checkout ⁉️`;
-    div1.append(p);
+  let div = creEle("div");
+  div.classList = "pop_checkout_box";
 
-    let div2 = creEle("div");
-    let firstDiv = creEle("div");
-    firstDiv.classList = "sub_total_pop_cart"
+  let div1 = creEle("div");
+  let p = creEle("p");
+  p.innerText = `**Actual Delivery Charges computed at checkout ⁉️`;
+  div1.append(p);
 
-    let tempMaster = creEle("div")
+  let div2 = creEle("div");
+  let firstDiv = creEle("div");
+  firstDiv.classList = "sub_total_pop_cart";
 
-    let temp1 = creEle("div");
-    let s1 = creEle("p");
-    s1.innerText = `Sub Total: `;
-    let s2 = creEle("p");
-    s2.innerText = `Rs${subtotal}`;
-    temp1.append(s1, s2)
+  let tempMaster = creEle("div");
 
-    let temp2 = creEle("div");
-    let t1 = creEle("p");
-    t1.innerText = `Delivery Charge : `;
-    let t2 = creEle("p");
-    t2.innerText = ` ** 😒`; 
-    temp2.append(t1, t2);
+  let temp1 = creEle("div");
+  let s1 = creEle("p");
+  s1.innerText = `Sub Total: `;
+  let s2 = creEle("p");
+  s2.innerText = `Rs${subtotal}`;
+  temp1.append(s1, s2);
 
-    tempMaster.append(temp1, temp2)
+  let temp2 = creEle("div");
+  let t1 = creEle("p");
+  t1.innerText = `Delivery Charge : `;
+  let t2 = creEle("p");
+  t2.innerText = ` ** 😒`;
+  temp2.append(t1, t2);
 
-    firstDiv.append(tempMaster);
+  tempMaster.append(temp1, temp2);
 
-    let secondDiv = creEle("button");
-    secondDiv.innerText = `View Basket & Checkout`;
-    secondDiv.classList = "cart_pop_button";
-    secondDiv.setAttribute("id", "cart_button_pop");
-    secondDiv.onclick = ()=>{
-      location.href = "./cart.html";
-    }
+  firstDiv.append(tempMaster);
 
-    div2.append(firstDiv, secondDiv);
+  let secondDiv = creEle("button");
+  secondDiv.innerText = `View Basket & Checkout`;
+  secondDiv.classList = "cart_pop_button";
+  secondDiv.setAttribute("id", "cart_button_pop");
+  secondDiv.onclick = () => {
+    location.href = "./cart.html";
+  };
 
-    div.append(div1, div2);
+  div2.append(firstDiv, secondDiv);
 
-    getId("cart_pop_up").append(div)
+  div.append(div1, div2);
 
-}
+  getId("cart_pop_up").append(div);
+};
 
 let url = "http://localhost:3000/";
 //deleting product from pop cart
-let removeproduct= async(id)=>{
-  let res=await fetch(`${url}cart/${id}`,{
-      method:"DELETE",
-      
+let removeproduct = async (id) => {
+  let res = await fetch(`${url}cart/${id}`, {
+    method: "DELETE",
   });
-}
+};
 
 var isOnDiv = false;
 var isInPopMenu = false;
@@ -907,9 +906,9 @@ if (mediaQueryList.matches) {
   flag = false;
   getId("master_navbar").innerHTML = mNavbar();
   getId("master_navbar").style.backgroundColor = "#7ED957";
-  getId("search").addEventListener("input", ()=>{
-    getId("search_results").style.zIndex = "-1"
-    debouncing()
+  getId("search").addEventListener("input", () => {
+    getId("search_results").style.zIndex = "-1";
+    debouncing();
   });
   getId("mobile_menu_lines").addEventListener("click", () => {
     //menu fucntion
@@ -923,19 +922,17 @@ if (mediaQueryList.matches) {
   getId("top_menu_mobile_fifth").addEventListener("click", () => {
     location.href = "./cart.html";
   });
-  (async()=>{
-    try{
-      let res=await fetch(`${url}cart`)
-      let data= await res.json();
+  (async () => {
+    try {
+      let res = await fetch(`${url}cart`);
+      let data = await res.json();
       // console.log(data)
-      getId("cart_count_mobile_tag").innerText = data.length
+      getId("cart_count_mobile_tag").innerText = data.length;
+    } catch (err) {
+      getId("cart_count_mobile_tag").innerText = 0;
+      console.log(err);
     }
-    catch(err){
-      getId("cart_count_mobile_tag").innerText = 0
-      console.log(err)
-    }
-    
-  })()
+  })();
 } else {
   flag = true;
   getId("master_navbar").innerHTML = navbar();
@@ -947,7 +944,7 @@ if (mediaQueryList.matches) {
     location.href = "./cart.html";
   });
   getId("login_button_nav").addEventListener("click", () => {
-    location.href = "./signin.html";
+    location.href = "./signup.html";
   });
   getId("search").addEventListener("input", debouncing);
   getId("search_results").addEventListener("mouseleave", () => {
@@ -1020,36 +1017,41 @@ if (mediaQueryList.matches) {
           <p><i class="bi bi-telephone"></i> 1860 123 1000</p>
           <p><i class="bi bi-geo-alt"></i> Address <span id="nav_address_sign">▽</span></p>
           <p id="login_button_nav"><i class="bi bi-person"></i> Login/Sign Up </p>`;
-          if(localStorage.getItem("loggedName")){
-            getId("login_button_nav").innerHTML = `<i class="bi bi-person"></i> ${localStorage.getItem("loggedName")}`;
-          }
+        if (localStorage.getItem("loggedName")) {
+          getId(
+            "login_button_nav"
+          ).innerHTML = `<i class="bi bi-person"></i> ${localStorage.getItem(
+            "loggedName"
+          )}`;
+        }
       }
     }
   };
   var belowData;
-  (async()=>{
-    try{
-      let res=await fetch(`${url}cart`)
+  (async () => {
+    try {
+      let res = await fetch(`${url}cart`);
       belowData = await res.json();
-      getId("nav_cart_item_count").innerText = `${belowData.length} items`
+      getId("nav_cart_item_count").innerText = `${belowData.length} items`;
+    } catch (err) {
+      getId("nav_cart_item_count").innerText = `0 items`;
+      console.log(err);
     }
-    catch(err){
-      getId("nav_cart_item_count").innerText = `0 items`
-      console.log(err)
-    }
-    
-  })()
-  
+  })();
+
   getId("nav_cart").addEventListener("mouseover", () => {
-    cartPop(belowData)
-});
+    cartPop(belowData);
+  });
   getId("cart_div_master").addEventListener("mouseleave", () => {
     getId("cart_pop_up").innerHTML = null;
   });
-  if(localStorage.getItem("loggedName")){
-    getId("login_button_nav").innerHTML = `<i class="bi bi-person"></i> ${localStorage.getItem("loggedName")}`;
+  if (localStorage.getItem("loggedName")) {
+    getId(
+      "login_button_nav"
+    ).innerHTML = `<i class="bi bi-person"></i> ${localStorage.getItem(
+      "loggedName"
+    )}`;
   }
-
 }
 // media query event handler
 if (matchMedia) {
@@ -1065,35 +1067,33 @@ function WidthChange(mq) {
     flag = false;
     getId("master_navbar").innerHTML = mNavbar();
     getId("master_navbar").style.backgroundColor = "#7ED957";
-    getId("search").addEventListener("input", ()=>{
-      getId("search_results").style.zIndex = "-1"
-      debouncing()
+    getId("search").addEventListener("input", () => {
+      getId("search_results").style.zIndex = "-1";
+      debouncing();
     });
-  getId("mobile_menu_lines").addEventListener("click", () => {
-    //menu fucntion
-  });
-  getId("top_menu_mobile_second").addEventListener("click", () => {
-    location.href = "./signin.html";
-  });
-  getId("top_menu_mobile_third").addEventListener("click", () => {
-    location.href = "./index.html";
-  });
-  getId("top_menu_mobile_fifth").addEventListener("click", () => {
-    location.href = "./cart.html";
-  });
-  (async()=>{
-    try{
-      let res=await fetch(`${url}cart`)
-      let data= await res.json();
-      // console.log(data)
-      getId("cart_count_mobile_tag").innerText = data.length
-    }
-    catch(err){
-      getId("cart_count_mobile_tag").innerText = 0
-      console.log(err)
-    }
-    
-  })()
+    getId("mobile_menu_lines").addEventListener("click", () => {
+      //menu fucntion
+    });
+    getId("top_menu_mobile_second").addEventListener("click", () => {
+      location.href = "./signin.html";
+    });
+    getId("top_menu_mobile_third").addEventListener("click", () => {
+      location.href = "./index.html";
+    });
+    getId("top_menu_mobile_fifth").addEventListener("click", () => {
+      location.href = "./cart.html";
+    });
+    (async () => {
+      try {
+        let res = await fetch(`${url}cart`);
+        let data = await res.json();
+        // console.log(data)
+        getId("cart_count_mobile_tag").innerText = data.length;
+      } catch (err) {
+        getId("cart_count_mobile_tag").innerText = 0;
+        console.log(err);
+      }
+    })();
   } else {
     flag = true;
     getId("master_navbar").innerHTML = navbar();
@@ -1106,7 +1106,7 @@ function WidthChange(mq) {
       location.href = "./cart.html";
     });
     getId("login_button_nav").addEventListener("click", () => {
-      location.href = "./signin.html";
+      location.href = "./signup.html";
     });
     getId("search_results").addEventListener("mouseleave", () => {
       getId("search_results").innerHTML = null;
@@ -1182,26 +1182,28 @@ function WidthChange(mq) {
       }
     };
     var belowData;
-    (async()=>{
-      try{
-        let res=await fetch(`${url}cart`)
+    (async () => {
+      try {
+        let res = await fetch(`${url}cart`);
         belowData = await res.json();
-        getId("nav_cart_item_count").innerText = `${belowData.length} items`
+        getId("nav_cart_item_count").innerText = `${belowData.length} items`;
+      } catch (err) {
+        getId("nav_cart_item_count").innerText = `0 items`;
+        console.log(err);
       }
-      catch(err){
-        getId("nav_cart_item_count").innerText = `0 items`
-        console.log(err)
-      }
-      
-    })()
+    })();
     getId("nav_cart").addEventListener("mouseover", () => {
-      cartPop(belowData)
-  });
+      cartPop(belowData);
+    });
     getId("cart_pop_up").addEventListener("mouseleave", () => {
       getId("cart_pop_up").innerHTML = null;
     });
   }
-  if(localStorage.getItem("loggedName")){
-    getId("login_button_nav").innerHTML = `<i class="bi bi-person"></i> ${localStorage.getItem("loggedName")}`;
+  if (localStorage.getItem("loggedName")) {
+    getId(
+      "login_button_nav"
+    ).innerHTML = `<i class="bi bi-person"></i> ${localStorage.getItem(
+      "loggedName"
+    )}`;
   }
 }

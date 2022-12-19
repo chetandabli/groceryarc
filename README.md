@@ -1,5 +1,7 @@
 # BigBasket Clone (Groceryarc)
 
+## live link: https://lucent-valkyrie-3c86fc.netlify.app/
+
 #### Logo: 
 ![](https://i.ibb.co/Kqh1BZB/GA-2.png "Logo")
 

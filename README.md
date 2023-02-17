@@ -1,6 +1,8 @@
-# BigBasket Clone (Groceryarc)
+# Groceryarc (BigBasket Clone)
 
-## live link: https://lucent-valkyrie-3c86fc.netlify.app/
+Hello everyone, this is a Readme for our construct week project that has been completed successfully within the duration of 5 days. It was a group project. We've made the website with reference from bigbasket.com . We've created Home page , Signup page , Login page, products page and admin side of our project.
+
+##### live link: https://lucent-valkyrie-3c86fc.netlify.app/
 
 #### Logo: 
 ![](https://i.ibb.co/Kqh1BZB/GA-2.png "Logo")

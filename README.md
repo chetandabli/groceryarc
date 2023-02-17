@@ -2,9 +2,9 @@
 
 Hello everyone, this is a Readme for our construct week project that has been completed successfully within the duration of 5 days. It was a group project. We've made the website with reference from bigbasket.com . We've created Home page , Signup page , Login page, products page and admin side of our project.
 
-##### live link: https://lucent-valkyrie-3c86fc.netlify.app/
+### Live Links: 
+- Deploy link:- https://lucent-valkyrie-3c86fc.netlify.app/
 
-#### Logo: 
 ![](https://i.ibb.co/Kqh1BZB/GA-2.png "Logo")
 
 
@@ -27,3 +27,27 @@ Hello everyone, this is a Readme for our construct week project that has been co
 > json-server --watch db.json
 > ```
 > After entering the commands mentioned above, open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
+
+## Tech-Stack:
+
+    a. HTML (structuring)
+
+    b. CSS (styling)
+
+    c. Javascript (functionality)
+    
+    d. JSON mock server
+
+# Features
+
+    - Home page
+    - Navbar and Footer
+    - Homepage
+    - Signup | Login
+    - Product Page
+    - Admin Panel
+    - Search Funtionality
+    - Responsive
+    - Debouncing
+    
+# Glimpse and Screenshots of this project website:

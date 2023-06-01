@@ -22,8 +22,8 @@ Hello everyone, this is a Readme for our construct week project that has been co
 > Executing the commands mentioned below one by one in your command line will help in making this web app, up and running on your system in the development mode.
 > 
 > ```bash
-> git clone https://github.com/chetandabli/creepy-territory-8528.git
-> cd ./creepy-territory-8528
+> git clone https://github.com/chetandabli/groceryarc.git
+> cd ./groceryarc
 > npm install
 > json-server --watch db.json
 > ```
